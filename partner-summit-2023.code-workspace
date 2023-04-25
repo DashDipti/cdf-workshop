@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../partner-summit-2023"
+		},
+		{
+			"name": "cdw-workshop",
+			"path": "../cdw-workshop"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

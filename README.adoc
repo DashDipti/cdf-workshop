@@ -55,11 +55,11 @@ Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/sam
 Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0.1`. +
 (*Note*: Note that your Workshop Login Username would be something like `wuser00@workshop.com` and not just `wuser00`). +
 
-image::images/step1/1.PNG[] +
+image:images/step1/1.PNG[]  +
 
 You should be able to get the following home page of CDP Public Cloud. +
 
-image::images/step2/2.PNG[] +
+image:images/step1/2.PNG[]  +
 
 You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it here (https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html).
 Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.

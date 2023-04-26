@@ -136,9 +136,9 @@ image:images/stepx/x.PNG[]  +
 
 Example: 
 
-`kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093
-kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093
-kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093`
+`kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093`
+`kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093`
+`kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093`
 
 
 === Step 1.5: Download Resources from GitHub

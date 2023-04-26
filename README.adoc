@@ -302,13 +302,7 @@ Configure the processor in the following way. +
 Relationships +
  - `Auto Terminate Relationships`: Check the `Terminate` box under `success`. +
 
-`Properties` +
-`Directory` : [,sql]
-----
 
-#{S3 Directory}
-----
-+
 
 ==== Step 2.1.4: Renaming the queues
 

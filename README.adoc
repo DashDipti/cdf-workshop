@@ -142,7 +142,7 @@ kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093`
 
 
 === Step 1.5: Download Resources from GitHub
-Scroll up the page here (https://github.com/DashDipti/partner-summit-2023) and click on <> Code and then choose the option Download ZIP. +
+Scroll up the page here (https://github.com/DashDipti/cdf-workshop) and click on <> Code and then choose the option Download ZIP. +
 image:images/stepx/x.PNG[]  +
 
 Use any unzip utility to download extract the content of the partner-summit-2023-main.zip file. +
@@ -200,6 +200,36 @@ Click on the `Flow Options` on the top right corner of your canvas and then sele
 image:images/stepx/x.PNG[]  +
 
 Configure Parameters: Parameters are reused within the flow multiple times and will also be configurable at the time of deployment. +
+There are 2 options available: `Add Parameter`, which is used for specifying non-sensitive values and `Add Sensitive Paramter`, which is used for specifying sensitive parameters like password. +
+
+- Click on `Add Parameter`. +
+image:images/stepx/x.PNG[]  +
+
+Add the following parameters. +
+`Name`: `S3 Directory`. +
+`Value`: `LabData`. +
+Click on `Apply`. +
+image:images/stepx/x.PNG[]  +
+
+- Click on `Add Parameter`. +
+image:images/stepx/x.PNG[]  +
+
+Add the following parameters. +
+`Name`: `CDP Workload User`. +
+`Value`: `The username assigned to you`. Ex: `wuser00`. +
+Click on `Apply`. +
+image:images/stepx/x.PNG[]  +
+
+
+
+- Click on `Add Sensitive Parameter`. +
+image:images/stepx/x.PNG[]  +
+
+Add the following parameters. +
+`Name`: `CDP Workload User Password`. +
+`Value`: `Workload User password set by you in  `Step 1.3: Define Workload Password``. +
+Click on `Apply`. +
+image:images/stepx/x.PNG[]  +
 
 ==== Step 2.1.3: Create the flow
 

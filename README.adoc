@@ -297,8 +297,7 @@ Configure the processor in the following way. +
 `Execution` : `All Nodes` +
 `Properties` +
 	- `Directory` : `#{S3 Directory}` +
-  - `Directory` : `#{CDP Workload User}` +
-	- `CDP Username` : `#{CDP Workload User}` +
+  - `CDP Username` : `#{CDP Workload User}` +	
 	- `CDP Password` : `#{CDP Workload User Password}` +
 Relationships +
  - `Auto Terminate Relationships`: Check the `Terminate` box under `success`. +

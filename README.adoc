@@ -42,7 +42,7 @@ Your instructor will guide you through this. +
 
 *`NOTE: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT EXECUTE THE STEPS IN THIS SECTION OR CHANGE ANYTHING.`*
 
-(1) Accessing Apache Ranger +
+==== Step 1.2.1: Accessing Apache Ranger +
 
 Click on the `Management Console` icon. +
 image:images/step/ +
@@ -55,7 +55,7 @@ image:images/step/ +
 image:images/step/ +
 
 
-(2) Kafka Permissions +
+==== Step 1.2.2: Kafka Permissions +
 
 In Ranger, select the Kafka repository that’s associated with the stream messaging datahub. +
 image:images/step/ +
@@ -69,7 +69,7 @@ The below image reflects the group `workshop-users` being part of `all-topic`. +
 image:images/step/ +
 
 
-(3) Schema Registry Permissions +
+==== Step 1.2.3: Schema Registry Permissions +
 In Ranger, select the `SCHEMA-REGISTRY' repository that’s associated with the stream messaging datahub. +
 image:images/step/ +
 

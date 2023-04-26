@@ -29,27 +29,56 @@ For the ease of carrying out the workshop and considering the time at hand, we h
 Step 0 basically talks about verifying different aspects w.r.t to access and connections before we could begin with the actual steps.
 
 
-== Step 0: Introduction & Set Up
+== Step 1: Introduction & Set Up
 
-=== Step 0.1: Access Verification
+=== Step 1.1: Access Verification
 
 Your instructor will guide you through this. +
 (1) https://docs.google.com/spreadsheets/d/1s63G-iBtgS8tDZOD1ml8Gh0YdunL4MtNqNzyN7E7gaY/edit#gid=412559706[Credentials]: Participants must enter their `First Name`, `Last Name` & `Company` details and make a note of corresponding `Workshop Login Username`, `Workshop Login Password` and `CDP Workload User` to be used in this workshop. +
 (2) http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]: Using the details in the previous step make sure you are able to login here. +
 
 
-=== Step 0.2: Verify permissions in Apache Ranger
+=== Step 1.2: Verify permissions in Apache Ranger
 
 *`NOTE: THESE STEPS HAVE ALREADY BEEN DONE FOR YOU, THIS SECTION WILL WALK YOU THROUGH HOW PERMISSIONS/POLICIES ARE MANAGED IN RANGER. PLEASE DO NOT EXECUTE THE STEPS IN THIS SECTION OR CHANGE ANYTHING.`*
 
 (1) Accessing Apache Ranger +
 
+Click on the `Management Console` icon. +
+image:images/step/ +
+
+Click on the `Environments` tab on the left pane. +
+image:images/step/ +
+
+Select the environment that is shared by the instructor (Ex: `pse-workshop`) and click on the Ranger quick link to access the Ranger UI. +
+image:images/step/ +
+image:images/step/ +
+
+
 (2) Kafka Permissions +
 
+In Ranger, select the Kafka repository that’s associated with the stream messaging datahub. +
+image:images/step/ +
+
+Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in both `all-consumergroup` and `all-topic`. +
+
+The below image reflects the group `workshop-users` being part of `all-consumergroup`. +
+image:images/step/ +
+
+The below image reflects the group `workshop-users` being part of `all-topic`. +
+image:images/step/ +
+
+
 (3) Schema Registry Permissions +
+In Ranger, select the `SCHEMA-REGISTRY' repository that’s associated with the stream messaging datahub. +
+image:images/step/ +
 
+Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in the Policy : all - `schema-group, schema-metadata, schema-branch, schema-version`. +
+image:images/step/ +
+image:images/step/ +
+image:images/step/ +
 
-== Step 1: Define Workload Password
+=== Step 1.3: Define Workload Password
 
 Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]. +
 Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0.1`. +
@@ -82,7 +111,44 @@ image::images/step4/3.PNG[]
 
 Check that you got the message - `Workload password is currently set` or alternatively, look for a message next to `Workload Password` which says `(Workload password is currently set)`
 
-image::images/step4/4.PNG[]
+image::images/step4/4.PNG[] +
+
+
+=== Step 1.4: Obtain the Kafka Broker List
+
+We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect  and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
+
+- Access the Data Hub: Goto the environment that is shared by the INSTRUCTOR (Ex: `pse-workshop`). +
+image:images/step/ +
+
+- Click on the DataHub associated with Streams Messaging Manager. +
+
+- Go to the Streams Messaging Interface. +
+
+- Select Brokers from the left tab. +
+
+- Save the broker list. +
+
+
+Example: 
+
+kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093
+kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093
+kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093
+
+
+=== Step 1.5: Download Resources from GitHub
+
+
+=== Step 1.6: Unlock your KeyTab
+
+
+
+
+
+== Step 2: Create a Flow using Flow Designer
+
+
 
 
 == Overview

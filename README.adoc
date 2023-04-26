@@ -173,7 +173,7 @@ Creating a data flow for CDF-PC is the same process as creating any data flow wi
 - Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc.
 - All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC.
 
-=== Step 2.1: Building the Data Fllow using Flow Designer
+=== Step 2.1: Building the Data Flow using Flow Designer
 
 ==== Step 2.1.1: Create the canvas to design your flow
 Access the `DataFlow` data service from the Management Console. +
@@ -227,7 +227,7 @@ image:images/stepx/x.PNG[]  +
 
 Add the following parameters. +
 `Name`: `CDP Workload User Password`. +
-`Value`: `Workload User password set by you in  `Step 1.3: Define Workload Password``. +
+`Value`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
 Click on `Apply`. +
 image:images/stepx/x.PNG[]  +
 

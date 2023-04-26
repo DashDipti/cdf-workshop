@@ -643,11 +643,31 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 `Kafka Broker Endpoint`: A comma separated list of Kafka Brokers. +
 		*Example*: `kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093` +
 `Kafka Destination Topic`: <username>_syslog (Ex: wuser00-syslog) +
-`Kafka Producer ID` - nifi_dfx_p1 +
-`Schema Name` - <username>-syslog (Ex: wuser00-syslog) +
-`Schema Registry Hostname` - The hostname of the master server in the Kafka Datahub(kafka-smm-cluster) (Refer screenshot below). +
+`Kafka Producer ID`:  nifi_dfx_p1 +
+`Schema Name`: <username>-syslog (Ex: wuser00-syslog) +
+`Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub(kafka-smm-cluster) (Refer screenshot below). +
 *Example*: `kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site` +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
 
+
+On the next page, define sizing and scaling details and then click `Next`. +
+`Size`: `Extra Small` +
+`Enable Auto Scaling`: `True` +
+`Min Nodes`: `1` +
+`Max Nodes`: `3` +
+image:images/stepx/x.PNG[]  +
+
+
+Skip the KPI page by clicking `Next` and Review your deployment. Then Click `Deploy`. +
+image:images/stepx/x.PNG[]  +
+
+Proceed to the CDF-PC Dashboard and wait for your flow deployment to complete. A Green Check Mark will appear once complete, which might take a few minutes. +
+image:images/stepx/x.PNG[]  +
+
+Click into your deployment and then Click `Manage Deployment` on the top right to view metrics. +
+image:images/stepx/x.PNG[]  +
 
 
 
@@ -655,7 +675,12 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
 
 
+Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster`. +
+Within the DataHub, click on `Streaming SQL Console`.  +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
 
+Create a new project: Create a SSB Project by clicking `New Project` using the following details and click `Create`. +
 
 
 ===== Misc Help ======

@@ -90,7 +90,7 @@ You should be able to get the following home page of CDP Public Cloud. +
 
 image:images/step1/2.PNG[]  +
 
-You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it here (https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html).
+You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
 Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
 
 . Click on your `user name (Ex: wuser00@workshop.com`) at the lower left corner.

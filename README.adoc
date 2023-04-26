@@ -680,7 +680,53 @@ Within the DataHub, click on `Streaming SQL Console`.  +
 image:images/stepx/x.PNG[]  +
 image:images/stepx/x.PNG[]  +
 
-Create a new project: Create a SSB Project by clicking `New Project` using the following details and click `Create`. +
+Create a new project: Create a SQL Stream Builer (SSB) Project by clicking `New Project` using the following details and click `Create`. +
+`Name`: `{user_id}_hol_workshop`. (Ex: `wuser00_hol_workshop`).  +
+`Description`:  SSB Project to analyze streaming data.  +
+image:images/stepx/x.PNG[]  +
+
+Switch to the created project. Click on `Switch`. +
+image:images/stepx/x.PNG[]  +
+
+Create Kafka Data Store: Create Kafka Data Store by selecting `Data Sources` in the left pane, clicking on the three-dotted icon next to `Kafka`, then selecting `New Kafka Data Source`. +
+image:images/stepx/x.PNG[]  +
+
+`Name`: `{user-id}_cdp_kafka`. (Ex: wuser00_cdp_kafka) +
+`Brokers`: (Comma-separated List) +
+`kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093` +
+`Protocol`: `SASL/SSL` +
+`SASL Username`: `<workload-username>`. (Ex: wuser00). +
+`SASL Password`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
+image:images/stepx/x.PNG[]  +
+
+Click on `Validate` to test the connections. Once successful click on `Create`. +
+image:images/stepx/x.PNG[]  +
+
+Create Kafka Table: Create Kafka Table, by selecting `Virtual Tables` in the left pane by clicking on the three-dotted icon next to it.  The click on `New Kafka Table`. +
+image:images/stepx/x.PNG[]  +
+
+Configure the Kafka Table using the details below. +
+`Table Name`: {user-id}_syslog_data. (Ex:` wuser00_syslog_data`) +
+`Kafka Cluster`: `<select the Kafka data source you created previously>`. (Ex: wuser00_cdp_kafka) +
+`Data Format`: `JSON`. +
+`Topic Name`: `<select the topic created in Schema Registry>`. +
+image:images/stepx/x.PNG[]  +
+
+When you select Data Format as AVRO, you must provide the correct Schema Definition when creating the table for SSB to be able to successfully process the topic data. For JSON tables, though, SSB can look at the data flowing through the topic and try to infer the schema automatically, which is quite handy at times. Obviously, there must be data in the topic already for this feature to work correctly. +
+
+*Note*: SSB tries its best to infer the schema correctly, but this is not always possible and sometimes data types are inferred incorrectly. You should always review the inferred schemas to check if it's correctly inferred and make the necessary adjustments. +
+
+Since you are reading data from a JSON topic, go ahead and click on `Detect Schema` to get the schema inferred. You should see the schema be updated in the `Schema Definition` tab. +
+image:images/stepx/x.PNG[]  +
+
+You will also notice that a "Schema is invalid" message appears upon the schema detection. If you hover the mouse over the message it shows the reason. +
+image:images/stepx/x.PNG[]  +
+You will fix this in the next step. +
+
+
+Each record read from Kafka by SSB has an associated timestamp column of data type TIMESTAMP ROWTIME. By default, this timestamp is sourced from the internal timestamp of the Kafka message and is exposed through a column called eventTimestamp. However, if your message payload already contains a timestamp associated with the event (event time), you may want to use that instead of the Kafka internal timestamp. +
+
+In this case, the syslog message has a field called `timestamp` that contains the timestamp you should use. You want to expose this field as the table's `event_time` column. To do this, click on the Event Time tab and enter the following properties. +
 
 
 ===== Misc Help ======

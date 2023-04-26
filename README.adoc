@@ -441,7 +441,7 @@ image:images/stepx/x.PNG[]  +
 Manage Sizing and Scaling: Click on the `Sizing and Scaling` tab to get detailed information. +
 image:images/stepx/x.PNG[]  +
 
-Manage Parameters: The parameters that we earlier created can be managed from the Parameters tab. Click on Parameters. +
+Manage Parameters: The parameters that we earlier created can be managed from the Parameters tab. Click on `Parameters`. +
 image:images/stepx/x.PNG[]  +
 
 NiFi Configurations: If you have set any configuration w.r.t to Nifi they will show up on the `NiFi Configuration` tab. +
@@ -468,10 +468,10 @@ For this we will be leveraging the DataHubs which have already been created - `s
 `Note that the above names might be different depending upon your environment.`
 
 === Step 3.1: Create a Kafka Topic
-Login to `Streams Messaging Manager` by clicking the appropriate hyperlink in the Streams Messaging Datahub ( Ex: `kafka-smm-cluster` ). +
+Login to `Streams Messaging Manager` by clicking the appropriate hyperlink in the Streams Messaging Datahub ( Ex: `kafka-smm-cluster`). +
 image:images/stepx/x.PNG[]  +
 
-Click on Topics in the left tab. +
+Click on `Topics` in the left tab. +
 image:images/stepx/x.PNG[]  +
 
 Click on `Add New`. +
@@ -484,23 +484,150 @@ Create a Topic with the following parameters and then click `Save`. +
 `Cleanup Policy`: `Delete` +
 image:images/stepx/x.PNG[]  +
 
-*Note*: `The Flow will not work if you set the Cleanup Policy to anything other than `Delete`. This is because we are not specifying keys when writing to Kafka.`
+*Note*: The Flow will not work if you set the Cleanup Policy to anything other than `Delete`. This is because we are not specifying keys when writing to Kafka.
 
 
 
 === Step 3.2: Create a Schema in Schema Registry
+Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub(kafka-smm-cluster). +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
 
+Click on the `+` button on the top right to create a new schema. +
+image:images/stepx/x.PNG[]  +
+
+Create a new schema with the following information. +
+`Name`: <username>-syslog +
+`Description`: syslog schema for dataflow workshop +
+`Type`: Avro schema provider +
+`Schema Group`: Kafka +
+`Compatibility`: Backward +
+`Evolve`: True +
+`Schema Text`: Copy and paste the below schema text below into the `Schema Text` field. +
+
+[,sql]
+----
+
+{
+  "name": "syslog",
+  "type": "record",
+  "namespace": "com.cloudera",
+  "fields": [
+    {
+      "name": "priority",
+      "type": "int"
+    },
+    {
+      "name": "severity",
+      "type": "int"
+    },
+    {
+      "name": "facility",
+      "type": "int"
+    },
+    {
+      "name": "version",
+      "type": "int"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    },
+    {
+      "name": "hostname",
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "type": "string"
+    },
+    {
+      "name": "appName",
+      "type": "string"
+    },
+    {
+      "name": "procid",
+      "type": "string"
+    },
+    {
+      "name": "messageid",
+      "type": "string"
+    },
+    {
+      "name": "structuredData",
+      "type": {
+        "name": "structuredData",
+        "type": "record",
+        "fields": [
+          {
+            "name": "SDID",
+            "type": {
+              "name": "SDID",
+              "type": "record",
+              "fields": [
+                {
+                  "name": "eventId",
+                  "type": "string"
+                },
+                {
+                  "name": "eventSource",
+                  "type": "string"
+                },
+                {
+                  "name": "iut",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+
+----
+
+*Note:* The name of the Kafka Topic you previously created and the Schema Name must be the same. +
+
+Click `Save`.
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
 
 
 == Step 4: Operationalizing Externally Developed Data Flows with CDF-PC
 
 === Step 4.1: Import the Flow into the CDF-PC Catalog
+Open the CDF-PC data service and click on `Catalog` in the left tab. +
+image:images/stepx/x.PNG[]  +
+
+Select `Import Flow Definition` on the Top Right. +
+image:images/stepx/x.PNG[]  +
+
+
+Add the following information. +
+`Flow Name`: <username>-syslog-to-kafka.
+`Flow Description`: `Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka.` +
+`NiFi Flow Configuration`: syslog-to-kafka.json (From the resources downloaded earlier). +
+`Version Comments`: Initial Version. +
+Click `Import`. +
+image:images/stepx/x.PNG[]  +
+
 
 
 === Step 4.2: Deploy the Flow in CDF-PC
 
+Search for the flow in the Flow Catalog by typing the flow name that you created in the previous step. +
+image:images/stepx/x.PNG[]  +
+
+Click on the Flow, you should see the following. +
+image:images/stepx/x.PNG[]  +
 
 
+Click on `Version 1`, you should see a `Deploy` Option appear shortly. Then click on `Deploy`. +
+image:images/stepx/x.PNG[]  +
+
+Select the CDP `Target Environment` (Ex: `pse-workshop`) where this flow will be deployed, then click `Continue`. +
 
 
 == Step 5: SQL Stream Builder (SSB)

@@ -231,7 +231,50 @@ Add the following parameters. +
 Click on `Apply`. +
 image:images/stepx/x.PNG[]  +
 
+Click on `Apply Changes`. +
+image:images/stepx/x.PNG[]  +
+
+Click on 'Back to Flow Designer' +
+image:images/stepx/x.PNG[]  +
+
+Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is useful for CDP Workload User and CDP Workload User Password. +
+`*NOTE ONLY*: To search for existing parameters -
+1. Open a processor's configuration and proceed to the properties tab.
+2. Enter: #{.
+3. Hit  'Ctrl+Spacebar'.
+
+This will bring up a list of existing parameters that are not tagged as sensitive.`
+
 ==== Step 2.1.3: Create the flow
+Let's go back to the canvas to start designing our flow.This flow will contain 2 Processors: +
+`GenerateFlowFile`: Generates random data. +
+`PutCDPObjectStore`: Loads data into HDFS(S3). +
+Our final flow will look something like this. +
+image:images/stepx/x.PNG[]  +
+
+Add `GenerateFlowFile` processor: Pull the `Processor` onto the canvas and type `GenerateFlowFile` in the text box, and once the processor appears click on `Add`. +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+
+Configure `GenerateFlowFile` processor: The `GenerateFlowFile` Processor will now be on your canvas and you can configure it by right clicking on it and selecting `Configuration`. +
+image:images/stepx/x.PNG[]  +
+Configure the processor in the following way. +
+`Processor Name` : DataGenerator +
+`Scheduling Strategy` : Timer Driven +
+`Run Duration` : 0 ms +
+`Run Schedule` : 30 sec +
+`Execution` : All Nodes +
+`Properties`: Custom Text +
+
+[,sql]
+----
+
+<26>1 2021-09-21T21:32:43.967Z host1.example.com application4 3064 ID42 [exampleSDID@873 iut="4" eventSource="application" eventId="58"] application4 has 
+stopped unexpectedly
+----
+
+This represents a syslog out in RFC5424 format. Subsequent portions of this workshop will leverage this same syslog format.
+
 
 ==== Step 2.1.4: Renaming the queues
 

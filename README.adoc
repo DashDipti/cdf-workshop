@@ -259,12 +259,12 @@ image:images/stepx/x.PNG[]  +
 Configure `GenerateFlowFile` processor: The `GenerateFlowFile` Processor will now be on your canvas and you can configure it by right clicking on it and selecting `Configuration`. +
 image:images/stepx/x.PNG[]  +
 Configure the processor in the following way. +
-`Processor Name` : DataGenerator +
-`Scheduling Strategy` : Timer Driven +
-`Run Duration` : 0 ms +
-`Run Schedule` : 30 sec +
-`Execution` : All Nodes +
-`Properties`: Custom Text +
+`Processor Name` : `DataGenerator` +
+`Scheduling Strategy` : `Timer Driven` +
+`Run Duration` : `0 ms` +
+`Run Schedule` : `30 sec` +
+`Execution` : `All Nodes` +
+`Properties`: `Custom Text` +
 
 [,sql]
 ----
@@ -273,7 +273,34 @@ Configure the processor in the following way. +
 stopped unexpectedly
 ----
 
-This represents a syslog out in RFC5424 format. Subsequent portions of this workshop will leverage this same syslog format.
+The above represents a syslog out in RFC5424 format. Subsequent portions of this workshop will leverage this same syslog format. +
+
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+
+Click on 'Apply'. [Attention] - Screenshot might be needed. +
+image:images/stepx/x.PNG[]  +
+
+
+Add `PutCDPObjectStore` processor: Pull a new `Processor` onto the canvas and type `PutCDPObjectStore` in the text box, and once the processor appears click on `Add`. +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+
+Configure `PutCDPObjectStore` processor: The `PutCDPObjectStore` Processor will now be on your canvas and you can configure it by right clicking on it and selecting `Configuration`. +
+Click on 'Apply'. [Attention] - Screenshot might be needed. +
+image:images/stepx/x.PNG[]  +
+Configure the processor in the following way. +
+`Processor Name` : `Move2S3`
+`Scheduling Strategy` : `Timer Driven`
+`Run Duration` : `0 ms`
+`Run Schedule` : `0 sec`
+`Execution` : `All Nodes`
+`Properties`
+	`Directory` : `#{S3 Directory}`
+	`CDP Username` : `#{CDP Workload User}`
+	`CDP Password` : `#{CDP Workload User Password}`
+Relationships
+ - `Auto Terminate Relationships`: Check the `Terminate` box under `success`.
 
 
 ==== Step 2.1.4: Renaming the queues

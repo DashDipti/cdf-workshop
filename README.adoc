@@ -727,11 +727,44 @@ You will fix this in the next step. +
 Each record read from Kafka by SSB has an associated timestamp column of data type TIMESTAMP ROWTIME. By default, this timestamp is sourced from the internal timestamp of the Kafka message and is exposed through a column called eventTimestamp. However, if your message payload already contains a timestamp associated with the event (event time), you may want to use that instead of the Kafka internal timestamp. +
 
 In this case, the syslog message has a field called `timestamp` that contains the timestamp you should use. You want to expose this field as the table's `event_time` column. To do this, click on the Event Time tab and enter the following properties. +
+`Use Kafka Timestamps`: `Disable`. +
+`Input Timestamp Column`: `timestamp`. +
+`Event Time Column`: `event_time`. +
+`Watermark Seconds`: `3`. +
+image:images/stepx/x.PNG[]  +
+
+Now that you have configured the event time column, click on Detect Schema again. You should see the schema turn valid. +
+image:images/stepx/x.PNG[]  +
+
+Click the `Create and Review` button to create the table. +
+image:images/stepx/x.PNG[]  +
+Review the table's DDL and click Close. +
+
+Create a Flink Job, by selecting `Jobs` in the left pane, clicking on the three-dotted icon next to it, then clicking on `New Job`. +
+image:images/stepx/x.PNG[]  +
+
+
+Give a unique job name (Ex:` wuser00_flink_job`) and click `Create`. +
+image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+
+Add the following SQL Statement in the Editor. +
+[,sql]
+----
+
+SELECT * FROM {user-id}_syslog_data WHERE severity <=3
+----
+
+Run the Streaming SQL Job by clicking `Execute`. Also, ensure your `{user_id}-syslog-to-kafka` flow is running in CDF-PC. +
+image:images/stepx/x.PNG[]  +
+
+In the `Results` tab, you should see syslog messages with severity levels <=3. +
+image:images/stepx/x.PNG[]  +
 
 
 ===== Misc Help ======
 [,sql]
 ----
 
-CREATE DATABASE <user>_stocks;
+SELECT * FROM {user-id}_syslog_data WHERE severity <=3
 ----

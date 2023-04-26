@@ -290,17 +290,17 @@ Configure `PutCDPObjectStore` processor: The `PutCDPObjectStore` Processor will 
 Click on 'Apply'. [Attention] - Screenshot might be needed. +
 image:images/stepx/x.PNG[]  +
 Configure the processor in the following way. +
-`Processor Name` : `Move2S3`
-`Scheduling Strategy` : `Timer Driven`
-`Run Duration` : `0 ms`
-`Run Schedule` : `0 sec`
-`Execution` : `All Nodes`
-`Properties`
-	`Directory` : `#{S3 Directory}`
-	`CDP Username` : `#{CDP Workload User}`
-	`CDP Password` : `#{CDP Workload User Password}`
-Relationships
- - `Auto Terminate Relationships`: Check the `Terminate` box under `success`.
+`Processor Name` : `Move2S3` +
+`Scheduling Strategy` : `Timer Driven` +
+`Run Duration` : `0 ms` +
+`Run Schedule` : `0 sec` +
+`Execution` : `All Nodes` +
+`Properties` +
+	`Directory` : `#{S3 Directory}` +
+	`CDP Username` : `#{CDP Workload User}` +
+	`CDP Password` : `#{CDP Workload User Password}` +
+Relationships +
+ - `Auto Terminate Relationships`: Check the `Terminate` box under `success`. +
 
 
 ==== Step 2.1.4: Renaming the queues

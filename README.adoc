@@ -628,6 +628,27 @@ Click on `Version 1`, you should see a `Deploy` Option appear shortly. Then clic
 image:images/stepx/x.PNG[]  +
 
 Select the CDP `Target Environment` (Ex: `pse-workshop`) where this flow will be deployed, then click `Continue`. +
+image:images/stepx/x.PNG[]  +
+
+Give the deployment a unique name (Ex: `{user_id}_syslog_to_kafka`), then click `Next`. +
+image:images/stepx/x.PNG[]  +
+
+In the NiFi Configuration screen, click `Next ->` to take the default parameters. +
+image:images/stepx/x.PNG[]  +
+
+Add the Flow Parameters as below. Note that you might have to navigate to multiple screens to fill it. Then click `Next`. +
+`CDP Workload User`: The workload username for the current user. (Ex: wuser00) +
+`CDP Workload Password`: The workload password for the current user (This password was set by you earlier). +
+`Filter Rule`: `SELECT * FROM FLOWFILE`. +
+`Kafka Broker Endpoint`: A comma separated list of Kafka Brokers. +
+		*Example*: `kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093` +
+`Kafka Destination Topic`: <username>_syslog (Ex: wuser00-syslog) +
+`Kafka Producer ID` - nifi_dfx_p1 +
+`Schema Name` - <username>-syslog (Ex: wuser00-syslog) +
+`Schema Registry Hostname` - The hostname of the master server in the Kafka Datahub(kafka-smm-cluster) (Refer screenshot below). +
+*Example*: `kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site` +
+
+
 
 
 == Step 5: SQL Stream Builder (SSB)

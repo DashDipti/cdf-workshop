@@ -297,6 +297,7 @@ Configure the processor in the following way. +
 `Execution` : `All Nodes` +
 `Properties` +
 	- `Directory` : `#{S3 Directory}` +
+  - `Directory` : `#{S3 Directory}` +
 	- `CDP Username` : `#{CDP Workload User}` +
 	- `CDP Password` : `#{CDP Workload User Password}` +
 Relationships +

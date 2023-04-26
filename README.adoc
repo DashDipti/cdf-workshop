@@ -90,8 +90,9 @@ You should be able to get the following home page of CDP Public Cloud. +
 
 image:images/step1/2.PNG[]  +
 
-You will need to define your workload password that will be used to acess non-SSO interfaces. You may read more about it https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
-Please keep it with you. If you have forgotten it, you will be able to repeat this process and define another one.
+You will need to define your workload password that will be used to acess non-SSO interfaces. Please keep a note of this workload password. If you have forgotten it, you will be able to repeat this process and define another one. +
+You may read more about workload passwords https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
+
 
 . Click on your `user name (Ex: wuser00@workshop.com`) at the lower left corner.
 . Click on the `Profile` option.
@@ -118,23 +119,26 @@ image::images/step4/4.PNG[] +
 
 We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect  and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
 
-- Access the Data Hub: Goto the environment that is shared by the INSTRUCTOR (Ex: `pse-workshop`). +
+Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `pse-workshop`). +
 image:images/step/ +
 
-- Click on the DataHub associated with Streams Messaging Manager. +
+Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster`). +
+image:images/step/ +
 
-- Go to the Streams Messaging Interface. +
+Go to the Streams Messaging Interface. +
+image:images/step/ +
 
-- Select Brokers from the left tab. +
+Select Brokers from the left tab. +
+image:images/step/ +
 
-- Save the broker list. +
-
+Save the name of the broker list in a notepad. +
+image:images/step/ +
 
 Example: 
 
-kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093
+`kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093
 kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093
-kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093
+kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093`
 
 
 === Step 1.5: Download Resources from GitHub

@@ -154,18 +154,21 @@ image:images/stepx/x.PNG[]  +
 === Step 1.6: Unlock your KeyTab
 
 [Attention:] xx - Additional screens to be added here for how to get to this page. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/.PNG[]  +
 
 Open the SSB UI. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/x.PNG[]  +
 
 Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select Manage Keytab. Make sure you are logged in as the username that was assigned to you. +
-image:images/stepx/x.PNG[]  +
+image:images/step1-6-3/x.PNG[]  +
 
 Enter your Workload Username under `Principal Name*` and workload password that you had set earlier (In `Step 1.3: Define Workload Password`) in the `Password` field. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-6-4.PNG[]  +
 
 Click on `Unlock Keytab` and look for the message 'Success Keytab has been unclocked'.
+image:images/step1/1-6-5.PNG[]  +
+image:images/step1/1-6-6.PNG[]  +
+
 
 == Step 2: Create a Flow using Flow Designer
 Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps:
@@ -233,6 +236,8 @@ image:images/stepx/x.PNG[]  +
 
 Click on `Apply Changes`. +
 image:images/stepx/x.PNG[]  +
+image:images/stepx/x.PNG[]  +
+
 
 Click on 'Back to Flow Designer' +
 image:images/stepx/x.PNG[]  +
@@ -261,7 +266,7 @@ image:images/stepx/x.PNG[]  +
 Configure the processor in the following way. +
 `Processor Name` : `DataGenerator` +
 `Scheduling Strategy` : `Timer Driven` +
-`Run Duration` : `0 ms` +
+`Run Duration` : `0ms` +
 `Run Schedule` : `30 sec` +
 `Execution` : `All Nodes` +
 `Properties`: `Custom Text` +
@@ -399,8 +404,9 @@ image:images/stepx/x.PNG[]  +
 [Attention] Set the `Parameters`. +
 `CDP Workload User`: `The username assigned to you`. Ex: `wuser00`. +
 `CDP Workload User Password`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
-`S3 Directory`: dirFlowCatalogDataDump
-`CDP Environment` : DummyParameter
+`CDP Environment` : DummyParameter +
+`S3 Directory`: `LabData` +
+
 
 image:images/stepx/x.PNG[]  +
 image:images/stepx/x.PNG[]  +

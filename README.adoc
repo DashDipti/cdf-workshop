@@ -213,16 +213,16 @@ image:images/step1/1-5-4.PNG[]  +
 Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
 image:images/step1/1-5-5.PNG[]  +
 
-Click on `Unlock Keytab` and look for the message 'Success Keytab has been unclocked'.
+Click on `Unlock Keytab` and look for the message `Success Keytab has been unclocked`.
 image:images/step1/1-5-6.PNG[]  +
 image:images/step1/1-5-7.PNG[]  +
 
 
 == Step 2: Create a Flow using Flow Designer
-Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps:
-- The data flow that would be used for CDF-PC must be self contained within a process group.
-- Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc.
-- All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC.
+Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps. +
+- The data flow that would be used for CDF-PC must be self contained within a process group. +
+- Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc. +
+- All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC. +
 
 === Step 2.1: Building the Data Flow using Flow Designer
 

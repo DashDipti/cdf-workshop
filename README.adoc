@@ -233,7 +233,7 @@ image:images/step2/2-1-1-2.PNG[]  +
 Click on `Create Draft` (This will be the main process group for the flow that you'll create). +
 image:images/step2/2-1-1-3.PNG[]  +
 
-Select the appropriate environment as part of the `Workspace` name (Ex: `emeaworkshop-environ`). *Note*: Please select the appropriate environment +
+Select the appropriate environment as part of the `Workspace` name (Ex: `emeaworkshop-environ`).  +
 Give your flow a name with your username as prefix (Ex: `wuser00_datadump_flow`). +
 Click on `CREATE`. +
 image:images/step2/2-1-1-4.PNG[]  +
@@ -278,7 +278,7 @@ Add the following parameters. +
 Click on `Apply`. +
 image:images/step2/2-1-2-7.PNG[]  +
 
-Click on `Apply Changes`. +
+Click on `Apply Changes`. And then click `ok`. +
 image:images/step2/2-1-2-8.PNG[]  +
 image:images/step2/2-1-2-9.PNG[]  +
 

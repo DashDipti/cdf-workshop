@@ -447,7 +447,7 @@ image:images/step2/2-4-4.PNG[]  +
 Set Nifi Configuration. In this step we let everything be the default and click `Next ->`. +
 image:images/step2/2-4-5.PNG[]  +
 
-Set the `Parameters`and click `Next ->`. +
+Set the `Parameters` and click `Next`. +
 `CDP Workload User`: `The username assigned to you`. Ex: `wuser00`. +
 `CDP Workload User Password`: `Workload User password set by you in 'Step 1.1: Define Workload Password'`. +
 `CDP Environment` : DummyParameter +
@@ -515,7 +515,7 @@ image:images/step2/2-5-9.PNG[]  +
 Click on `Actions` and then `Suspend Flow`. +
 image:images/step2/2-5-10.PNG[]  +
 
-Click on the verification 'Suspend Flow'. +
+Click on the verification `Suspend Flow`. +
 image:images/step2/2-5-11.PNG[]  +
 
 Observe the change in the status of the flow. +

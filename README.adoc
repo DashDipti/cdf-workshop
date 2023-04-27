@@ -45,14 +45,14 @@ Your instructor will guide you through this. +
 ==== Step 1.2.1: Accessing Apache Ranger +
 
 Click on the `Management Console` icon. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-2-1-1.PNG[]  +
 
 Click on the `Environments` tab on the left pane. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-2-1-2.PNG[]  +
 
 Select the environment that is shared by the instructor (Ex: `pse-workshop`) and click on the Ranger quick link to access the Ranger UI. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-2-1-3.PNG[]  +
+image:images/step1/1-2-1-4.PNG[]  +
 
 
 ==== Step 1.2.2: Kafka Permissions +

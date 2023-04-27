@@ -1,12 +1,10 @@
-= Cloudera Technical Workshop
-
+= Cloudera Data Flow Hands-On-Lab
+image:images/step0/HOL.PNG[]  +
 '''
 
 Version : 1.0.0 `25th April 2023` +
 
 '''
-
-image:images/step0/bannerturkey.PNG[]  +
 
 This document guides students through the Hands-on lab on of Cloudera Data Flow.
 It will take you step by step to completing the pre-requisites and deliver this demo.

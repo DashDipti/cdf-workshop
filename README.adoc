@@ -561,7 +561,7 @@ Create a Topic with the following parameters and then click `Save`. +
 `Cleanup Policy`: `Delete` +
 *Note*: The Flow will not work if you set the Cleanup Policy to anything other than `Delete`. This is because we are not specifying keys when writing to Kafka. +
 
-image:images/stepx/3-1-6.PNG[]  +
+image:images/step3/3-1-6.PNG[]  +
 image:images/step3/3-1-7.PNG[]  +
 
 You can search for the topic that you created now and look for it as shown here. +
@@ -573,7 +573,7 @@ image:images/step3/3-1-8.PNG[]  +
 
 You need to now work on `Schema Registry`. Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub (Ex: `kafka-smm-cluster-emea`). +
 image:images/step3/3-2-1a.PNG[]  +
-image:images/step3/3-2-1b.PNG[]  +
+//image:images/step3/3-2-1b.PNG[]  +
 
 Click on the `+` button on the top right to create a new schema. +
 image:images/step3/3-2-1c.PNG[]  +

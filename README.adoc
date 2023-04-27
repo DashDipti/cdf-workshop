@@ -11,8 +11,7 @@ It will take you step by step to completing the pre-requisites and deliver this 
 
 == Recording
 
-The entire lab is recorded and you can watch the same to have a better understanding of the lab. +
-https://filslin here[End-to-End Workshop (Recording)]. +
+This lab will have a recording in the future and can be accessed by clicking - https://infuture[CDF-Recording]. +
 
 == Pre-Requisite (Taken Care by Instructor)
 

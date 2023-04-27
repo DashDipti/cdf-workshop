@@ -71,7 +71,7 @@ image::images/step1/1-5.PNG[]
 
 Check that you got the message - `Workload password is currently set` or alternatively, look for a message next to `Workload Password` which says `(Workload password is currently set)`
 
-image::images/step1/1-6.PNG[] +
+image::images/step1/1-6.PNG[]
 
 === Step 1.2: Verify permissions in Apache Ranger
 

@@ -122,7 +122,7 @@ We will require the broker list to configure our processors to connect to our Ka
 Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `pse-workshop`). +
 image:images/stepx/x.PNG[]  +
 
-Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster`). +
+Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster-emea`). +
 image:images/stepx/x.PNG[]  +
 
 Go to the Streams Messaging Interface. +
@@ -470,11 +470,11 @@ The existing NiFi Flow will perform the following actions.
 
 Note that a parameter context has already been defined in the flow and the queues have been uniquely named. +
 
-For this we will be leveraging the DataHubs which have already been created - `ssb-analytics-cluster`, `nifi-flow-mgmt-cluster`, `kafka-smm-cluster`. +
+For this we will be leveraging the DataHubs which have already been created - `ssb-analytics-cluster-emea`, `kafka-smm-cluster-emea`. +
 `Note that the above names might be different depending upon your environment.`
 
 === Step 3.1: Create a Kafka Topic
-Login to `Streams Messaging Manager` by clicking the appropriate hyperlink in the Streams Messaging Datahub ( Ex: `kafka-smm-cluster`). +
+Login to `Streams Messaging Manager` by clicking the appropriate hyperlink in the Streams Messaging Datahub ( Ex: `kafka-smm-cluster-emea`). +
 image:images/stepx/x.PNG[]  +
 
 Click on `Topics` in the left tab. +
@@ -495,7 +495,7 @@ image:images/stepx/x.PNG[]  +
 
 
 === Step 3.2: Create a Schema in Schema Registry
-Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub(kafka-smm-cluster). +
+Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub(kafka-smm-cluster-emea). +
 image:images/stepx/x.PNG[]  +
 image:images/stepx/x.PNG[]  +
 
@@ -651,7 +651,7 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 `Kafka Destination Topic`: <username>_syslog (Ex: wuser00-syslog) +
 `Kafka Producer ID`:  nifi_dfx_p1 +
 `Schema Name`: <username>-syslog (Ex: wuser00-syslog) +
-`Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub(kafka-smm-cluster) (Refer screenshot below). +
+`Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub(kafka-smm-cluster-emea) (Refer screenshot below). +
 *Example*: `kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site` +
 image:images/stepx/x.PNG[]  +
 image:images/stepx/x.PNG[]  +
@@ -681,7 +681,7 @@ image:images/stepx/x.PNG[]  +
 The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
 
 
-Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster`. +
+Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster-emea`. +
 Within the DataHub, click on `Streaming SQL Console`.  +
 image:images/stepx/x.PNG[]  +
 image:images/stepx/x.PNG[]  +

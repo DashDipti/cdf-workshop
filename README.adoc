@@ -857,11 +857,3 @@ image:images/step5/5-11.PNG[]  +
 
 In the `Results` tab, you should see syslog messages with severity levels <=3. +
 image:images/step5/5-12.PNG[]  +
-
-
-===== Misc Help ======
-[,sql]
-----
-
-SELECT * FROM {user-id}_syslog_data WHERE severity <=3
-----

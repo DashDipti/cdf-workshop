@@ -292,8 +292,9 @@ image:images/step2/2-1-2-10.PNG[]  +
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is useful for `CDP Workload User` and `CDP Workload User Password`. +
 `*NOTE ONLY*: To search for existing parameters - +
+
 1. Open a processor's configuration and proceed to the properties tab. +
-2. Enter: `#{`. +
+2. Enter: #{ +
 3. Hit  `Ctrl+Spacebar`. +
 
 This will bring up a list of existing parameters that are not tagged as sensitive.

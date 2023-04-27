@@ -484,7 +484,7 @@ Click on `Add New`. +
 image:images/stepx/x.PNG[]  +
 
 Create a Topic with the following parameters and then click `Save`. +
-`Name`:	`<username>-syslog`. Ex: `wuser00_syslog`. +
+`Name`:	`<username>_syslog`. Ex: `wuser00_syslog`. +
 `Partitions`: `1` +
 `Availability`: `Moderate` +
 `Cleanup Policy`: `Delete` +
@@ -503,7 +503,7 @@ Click on the `+` button on the top right to create a new schema. +
 image:images/stepx/x.PNG[]  +
 
 Create a new schema with the following information. +
-`Name`: <username>-syslog +
+`Name`: <username>_syslog +
 `Description`: syslog schema for dataflow workshop +
 `Type`: Avro schema provider +
 `Schema Group`: Kafka +
@@ -594,7 +594,7 @@ Create a new schema with the following information. +
 
 ----
 
-*Note:* The name of the Kafka Topic you previously created and the Schema Name must be the same. +
+*Note:* The name of the Kafka Topic (Ex: `wuser00_syslog`) you previously created and the Schema Name must be the same. +
 
 Click `Save`.
 image:images/stepx/x.PNG[]  +
@@ -612,7 +612,7 @@ image:images/stepx/x.PNG[]  +
 
 
 Add the following information. +
-`Flow Name`: <username>-syslog-to-kafka.
+`Flow Name`: <username>_syslog_to_kafka. (Ex: `wuser00_syslog_to_kafka`) +
 `Flow Description`: `Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka.` +
 `NiFi Flow Configuration`: syslog-to-kafka.json (From the resources downloaded earlier). +
 `Version Comments`: Initial Version. +
@@ -702,6 +702,7 @@ image:images/stepx/x.PNG[]  +
 `kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093` +
 `Protocol`: `SASL/SSL` +
 `SASL Username`: `<workload-username>`. (Ex: wuser00). +
+`SASL Mechanism`: `PLAIN`. +
 `SASL Password`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
 image:images/stepx/x.PNG[]  +
 

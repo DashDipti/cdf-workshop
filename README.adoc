@@ -123,33 +123,32 @@ image:images/step1/1-2-3-5.PNG[]  +
 
 
 
-=== Step 1.4: Obtain the Kafka Broker List
+=== Step 1.3: Obtain the Kafka Broker List
 
 We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect  and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
 
 Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `emeaworkshop-environ`). +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-3-1.PNG[]  +
 
 Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster-emea`). +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-3-2.PNG[]  +
 
 Go to the Streams Messaging Interface. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-3-3.PNG[]  +
 
 Select Brokers from the left tab. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-3-4.PNG[]  +
 
 Save the name of the broker list in a notepad. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-3-5.PNG[]  +
 
-Example: 
+Example +
+`kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093` +
+`kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093` +
+`kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
 
-`kafka-smm-cluster-corebroker1.pko-hand.dp5i-5vkq.cloudera.site:9093` +
-`kafka-smm-cluster-corebroker0.pko-hand.dp5i-5vkq.cloudera.site:9093` +
-`kafka-smm-cluster-corebroker2.pko-hand.dp5i-5vkq.cloudera.site:9093` +
 
-
-=== Step 1.5: Download Resources from GitHub
+=== Step 1.4: Download Resources from GitHub
 Scroll up the page here (https://github.com/DashDipti/cdf-workshop) and click on <> Code and then choose the option Download ZIP. +
 image:images/stepx/x.PNG[]  +
 
@@ -159,7 +158,7 @@ image:images/stepx/x.PNG[]  +
 In the extracted content just be sure that the downloaded files has a file `syslog-to-kafka.json` which should be around ~25 KB in size. You will need this file in later step. +
 image:images/stepx/x.PNG[]  +
 
-=== Step 1.6: Unlock your KeyTab
+=== Step 1.5: Unlock your KeyTab
 
 [Attention:] xx - Additional screens to be added here for how to get to this page. +
 image:images/step1/.PNG[]  +

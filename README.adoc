@@ -57,16 +57,16 @@ image:images/step1/1-2-1-4.PNG[]  +
 
 ==== Step 1.2.2: Kafka Permissions +
 
-In Ranger, select the Kafka repository that’s associated with the stream messaging datahub. +
-image:images/stepx/x.PNG[]  +
+In Ranger UI, select the Kafka repository that’s associated with the stream messaging datahub. +
+image:images/stepx/1-2-2-1.PNG[]  +
 
 Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in both `all-consumergroup` and `all-topic`. +
 
 The below image reflects the group `workshop-users` being part of `all-consumergroup`. +
-image:images/stepx/x.PNG[]  +
+image:images/stepx/1-2-2-2.PNG[]  +
 
 The below image reflects the group `workshop-users` being part of `all-topic`. +
-image:images/stepx/x.PNG[]  +
+image:images/stepx/1-2-2-3.PNG[]  +
 
 
 ==== Step 1.2.3: Schema Registry Permissions +

@@ -333,7 +333,7 @@ The above represents a syslog out in RFC5424 format. Subsequent portions of this
 image:images/step2/2-1-3-5.PNG[]  +
 image:images/step2/2-1-3-6.PNG[]  +
 
-Click on 'Apply'. +
+Click on `Apply`. +
 image:images/step2/2-1-3-7.PNG[]  +
 
 
@@ -359,7 +359,7 @@ Configure the processor in the following way. +
 image:images/step2/2-1-3-11.PNG[]  +
 image:images/step2/2-1-3-12.PNG[]  +
 
-Click on 'Apply'. +
+Click on `Apply`. +
 image:images/step2/2-1-3-13.PNG[]  +
 
 Create connection between processors: Connect the two processors by dragging the arrow from `DataGenerator` processor to the `Move2S3` processor and select on `success` relationship . The click `Add`. +

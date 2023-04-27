@@ -35,7 +35,7 @@ Your instructor will guide you through this. +
 
 === Step 1.1: Define Workload Password
 
-Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login] in case you are not logged in. +
+PPlease use the login url: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login] in case you are not logged in. +
 Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0`. +
 (*Note*: Note that your Workshop Login Username would be something like `wuser00@workshop.com` and not just `wuser00`). +
 
@@ -61,7 +61,7 @@ image:images/step1/1-3.PNG[]  +
 
 image:images/step1/1-4.PNG[]  +
 
-image::images/step1/1-5.PNG[]
+image::images/step1/1-5.PNG[] +
 
 {blank} +
 

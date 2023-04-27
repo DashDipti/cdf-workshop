@@ -570,12 +570,13 @@ image:images/step3/3-1-8.PNG[]  +
 
 
 === Step 3.2: Create a Schema in Schema Registry
-Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub(kafka-smm-cluster-emea). +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+
+You need to now work on `Schema Registry`. Login to `Schema Registry` by clicking the appropriate hyperlink in the Streams Messaging Datahub (Ex: `kafka-smm-cluster-emea`). +
+image:images/step3/3-2-1a.PNG[]  +
+image:images/step3/3-2-1b.PNG[]  +
 
 Click on the `+` button on the top right to create a new schema. +
-image:images/stepx/x.PNG[]  +
+image:images/step3/3-2-1c.PNG[]  +
 
 Create a new schema with the following information. +
 `Name`: <username>_syslog +
@@ -672,8 +673,8 @@ Create a new schema with the following information. +
 *Note:* The name of the Kafka Topic (Ex: `wuser00_syslog`) you previously created and the Schema Name must be the same. +
 
 Click `Save`.
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step3/3-2-1d.PNG[]  +
+image:images/step3/3-2-1e.PNG[]  +
 
 
 == Step 4: Operationalizing Externally Developed Data Flows with CDF-PC

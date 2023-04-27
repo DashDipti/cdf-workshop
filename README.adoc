@@ -492,24 +492,24 @@ image:images/step2/2-4-14.PNG[]  +
 
 === Step 2.5: Verifying flow deployment
 Click on the flow in the Dashboard and select `Manage Deployment`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-5-1.PNG[]  +
+image:images/step2/2-5-2.PNG[]  +
 
 Manage KPI and Alerts: Click on the `KPI and Alerts` tab under `Deplyment Settings` to get the list of KPIs that have been set. You also have an option to modify or add more KPIs to your flow here. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-5-3.PNG[]  +
 
 Manage Sizing and Scaling: Click on the `Sizing and Scaling` tab to get detailed information. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-5-4.PNG[]  +
 
 Manage Parameters: The parameters that we earlier created can be managed from the Parameters tab. Click on `Parameters`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-5-5.PNG[]  +
 
 NiFi Configurations: If you have set any configuration w.r.t to Nifi they will show up on the `NiFi Configuration` tab. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-5-6.PNG[]  +
 
-View the deployed flow in NiFi: Select `Actions` on the `Deployment Manager` page and then click on `View in NiFi`. This will open the flow in the Nifi UI. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
-
+Click on `Actions` and then click on `View in NiFi`. This will open the flow in the Nifi UI. +
+image:images/step2/2-5-7.PNG[]  +
+image:images/step2/2-5-8.PNG[]  +
 
 
 == Step 3: Migrating Existing Data Flows to CDF-PC

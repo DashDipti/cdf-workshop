@@ -488,7 +488,7 @@ The data gets populated in the S3 bucket. Your instructor will be able to see th
 image:images/step2/2-4-14.PNG[]  +
 
 Also, after a while you will see the the flow something like below for the flow you just deployed. +
-image:images/step2/2-4-14.PNG[]  +
+image:images/step2/2-4-15.PNG[]  +
 
 === Step 2.5: Verifying flow deployment
 Click on the flow in the Dashboard and select `Manage Deployment`. +

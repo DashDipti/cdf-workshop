@@ -381,113 +381,114 @@ image:images/step2/2-1-3-18.PNG[]  +
 Naming the queue: Providing unique names to all queues is very important as they are used to define Key Performance Indicators (KPI) upon which CDF-PC will auto-scale. To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information. +
 
 For example, the success queue between `DataGenerator` and `Move2S3` is named `success_Move2S3`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-4-1.PNG[]  +
 
 The failure queue for `Move2S3` is named `failure_Move2S3`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-4-1.PNG[]  +
 
 
 
 === Step 2.2: Testing the flow
 Testing the Data Flow: To test the flow we need to first start the test session. Click on `Flow Options` on the top right corner and then click 'Start' under `Test Session` section. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-1.PNG[]  +
 
 In the next window, click `Start Test Session`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-2.PNG[]  +
 
 The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-3.PNG[]  +
 
 Once the Test Session is ready you will see the following message on the top right corner of your screen. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-4.PNG[]  +
 
 Run the flow by right clicking the `empty part` of the canvas and selecting `Start`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-5.PNG[]  +
 
 Both the processors should now be in the `Start` state. This can be confirmed by looking at the green play button against each processor. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-6.PNG[]  +
 
 You will now see files coming into the folder which was specified as the Directory on the S3 bucket which is the Base data store for this environment. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-2-7.PNG[]  +
 
-[Attention]: Add screenshot regarding suspend the flow. +
-image:images/stepx/x.PNG[]  +
+
+//Add screenshot regarding suspend the flow. +
+//image:images/step2/2-2-8.PNG[]  +
 
 === Step 2.3: Moving the flow to the flow catalog
 
 After the flow has been created and tested we can now PUBLISH the flow to the Flow Catalog. +
 Stop the current test session by clicking on the green tab on top right corner indicating `Active Test Session`. Click on `End`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-3-1.PNG[]  +
+image:images/step2/2-3-2.PNG[]  +
+image:images/step2/2-3-3.PNG[]  +
 
 Once the session stops click on `Flow Options` on the top right corner of your screen and click on `Publish`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-3-4.PNG[]  +
 
 Give your flow a unique name and click on `Publish`. +
 `Flow Name`: `{user_id}_datadump_flow` (Ex: `wuser00_datadump_flow`). +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-3-5.PNG[]  +
 
 The flow will now be visible on the `Flow Catalog` and is ready to be deployed. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-3-6.PNG[]  +
 
 === Step 2.4: Deploying the flow [Attention]
 Go to the `Catalog` and search for the `Flow Catalog` by typing the name of the flow that you just now published.
-[Attention]: Add screenshot regarding suspend the flow. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-1.PNG[]  +
 
 Click on the flow and you should see the option to `Deploy`. Click on 'Version 1' and then `Deploy`.
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-2.PNG[]  +
 
 Select the CDP `Target Environment' from the drop down. Make sure you select the environment given by the instructor. (Ex: `emeaworkshop-environ`). +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-3.PNG[]  +
 
-Deployment Name: Give a unique name to the deployment. +
+Deployment Name: Give a unique name to the deployment. Click `Next ->`. +
 `Deployment Name`: `{user_id}_flow_prod` (Ex: `wuser00_flow_prod`). +
-image:images/stepx/x.PNG[]  +
-
-Click `Next ->`. +
-[Attention]: Add screenshot +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-4.PNG[]  +
 
 Set Nifi Configuration. In this step we let everything be the default and click `Next ->`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-5.PNG[]  +
 
-[Attention] Set the `Parameters`. +
+Set the `Parameters`and click `Next ->`. +
 `CDP Workload User`: `The username assigned to you`. Ex: `wuser00`. +
 `CDP Workload User Password`: `Workload User password set by you in  'Step 1.1: Define Workload Password'`. +
 `CDP Environment` : DummyParameter +
 `S3 Directory`: `LabData` +
-
-
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-6.PNG[]  +
 
 Set the cluster size. +
 Select the `Extra Small` size and click `Next`.  In this step you can configure how your flow will autoscale, but keep it disabled for this lab. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-7.PNG[]  +
 
 Add Key Performance indicators: Set up KPIs to track specific performance metrics of a deployed flow. Click on `Add New KPI`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-8.PNG[]  +
 
-In the KPI Scope drop-down list, choose `Connection`. +
-image:images/stepx/x.PNG[]  +
 
-In the `Add New KPI` window, add an alert as below. +
-image:images/stepx/x.PNG[]  +
+In the `Add New KPI` window, fill in the details as below. +
+`KPI Scope`: `Connection`. +
+`Connection Name`: `failure_Move2S3`. +
+`Metric to Track`: `Percent Full`. +
+Check box against `Trigger alert when metric is greater than`: `50` `Percent`. +
+`Alert will be triggered when metric is outside the boundary(s) for`: `2` `Minutes`. +
+Click on `Add`. +
+image:images/step2/2-4-9.PNG[]  +
 
-Click `Add` and then click `Next`. +
-image:images/stepx/x.PNG[]  +
+Click `Next`. +
+image:images/step2/2-4-10.PNG[]  +
 
 Click `Deploy`. +
 The `Deployment Initiated` message will be displayed. Wait until the flow deployment is completed, which might take a few minutes.
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-11.PNG[]  +
 
 When deployed, the flow will show up on the Data flow dashboard, as below. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-4-12.PNG[]  +
+image:images/step2/2-4-13.PNG[]  +
 
-[Attention] - Additional step for a screenshot is needed here. +
-image:images/stepx/x.PNG[]  +
+The data gets populated in the S3 bucket. Your instructor will be able to see this and as a participant you don't have access. +
+image:images/step2/2-4-14.PNG[]  +
+
+Also, after a while you will see the the flow something like below for the flow you just deployed. +
+image:images/step2/2-4-14.PNG[]  +
 
 === Step 2.5: Verifying flow deployment
 Click on the flow in the Dashboard and select `Manage Deployment`. +

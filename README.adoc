@@ -61,7 +61,7 @@ image:images/step1/1-3.PNG[]  +
 
 image:images/step1/1-4.PNG[]  +
 
-image::images/step1/1-5.PNG[] +
+image:images/step1/1-5.PNG[]  +
 
 {blank} +
 

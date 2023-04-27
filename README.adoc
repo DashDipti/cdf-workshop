@@ -579,7 +579,7 @@ Click on the `+` button on the top right to create a new schema. +
 image:images/step3/3-2-1c.PNG[]  +
 
 Create a new schema with the following information. +
-`Name`: <username>_syslog +
+`Name`: <username>_syslog. (Ex: `wuser00_syslog`) +
 `Description`: syslog schema for dataflow workshop +
 `Type`: Avro schema provider +
 `Schema Group`: Kafka +

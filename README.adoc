@@ -378,16 +378,16 @@ image:images/step2/2-1-3-19.PNG[]  +
 
 Naming the queue: Providing unique names to all queues is very important as they are used to define Key Performance Indicators (KPI) upon which CDF-PC will auto scale. To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information. +
 
-For example, the success queue between `DataGenerator` and `Move2S3` is named `success_Move2S3`. +
+For example, the success queue between `DataGenerator` and `Move2S3` is named `success_Move2S3`. Click `Apply`. +
 image:images/step2/2-1-4-1.PNG[]  +
 
-The failure queue for `Move2S3` is named `failure_Move2S3`. +
+The failure queue for `Move2S3` is named `failure_Move2S3`. Click `Apply`. +
 image:images/step2/2-1-4-1.PNG[]  +
 
 
 
 === Step 2.2: Testing the flow
-Testing the Data Flow: To test the flow we need to first start the test session. Click on `Flow Options` on the top right corner and then click 'Start' under `Test Session` section. +
+Testing the Data Flow: To test the flow we need to first start the test session. Click on `Flow Options` on the top right corner and then click `Start` under `Test Session` section. +
 image:images/step2/2-2-1.PNG[]  +
 
 In the next window, click `Start Test Session`. +
@@ -414,7 +414,7 @@ image:images/step2/2-2-7.PNG[]  +
 
 === Step 2.3: Moving the flow to the flow catalog
 
-After the flow has been created and tested, we can now PUBLISH the flow to the Flow Catalog. +
+After the flow has been created and tested, we can now `Publish` the flow to the Flow Catalog. +
 Stop the current test session by clicking on the green tab on top right corner indicating `Active Test Session`. Click on `End`. +
 image:images/step2/2-3-1.PNG[]  +
 image:images/step2/2-3-2.PNG[]  +
@@ -427,7 +427,7 @@ Give your flow a unique name and click on `Publish`. +
 `Flow Name`: `{user_id}_datadump_flow` (Ex: `wuser00_datadump_flow`). +
 image:images/step2/2-3-5.PNG[]  +
 
-The flow will now be visible on the `Flow Catalog` and is ready to be deployed. +
+The flow will now be visible on the Flow  `Catalog` and is ready to be deployed. +
 image:images/step2/2-3-6.PNG[]  +
 
 === Step 2.4: Deploying the flow [Attention]

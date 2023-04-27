@@ -717,14 +717,14 @@ image:images/step4/4-2-5.PNG[]  +
 
 Add the Flow Parameters as below. Note that you might have to navigate to multiple screens to fill it. Then click `Next`. +
 
-`CDP Workload User`: The workload username for the current user. (Ex: wuser00) +
+`CDP Workload User`: The workload username for the current user. (Ex: `wuser00`) +
 `CDP Workload Password`: The workload password for the current user (This password was set by you earlier). +
 `Filter Rule`: `SELECT * FROM FLOWFILE`. +
 `Kafka Broker Endpoint`: A comma separated list of Kafka Brokers. +
 		*Example*: `kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
-`Kafka Destination Topic`: <username>_syslog (Ex: wuser00-syslog) +
+`Kafka Destination Topic`: <username>_syslog (Ex: `wuser00-syslog`) +
 `Kafka Producer ID`:  nifi_dfx_p1 +
-`Schema Name`: <username>-syslog (Ex: wuser00-syslog) +
+`Schema Name`: <username>-syslog (Ex: `wuser00-syslog`) +
 `Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub (Ex: `kafka-smm-cluster-emea`) (Refer screenshot below). +
 *Example*: `kafka-smm-cluster-emea-master0.emeawork.dp5i-5vkq.cloudera.site` +
 image:images/step4/4-2-6a.PNG[]  +
@@ -736,7 +736,7 @@ image:images/step4/4-2-7.PNG[]  +
 
 On the next page, define sizing and scaling details and then click `Next`. +
 `Size`: `Extra Small` +
-`Enable Auto Scaling`: `True` +
+`Auto Scaling`: `Enabled` +
 `Min Nodes`: `1` +
 `Max Nodes`: `3` +
 image:images/step4/4-2-8.PNG[]  +
@@ -750,30 +750,39 @@ Proceed to the CDF-PC Dashboard and wait for your flow deployment to complete. A
 image:images/step4/4-2-11.PNG[]  +
 image:images/step4/4-2-12.PNG[]  +
 
-Click into your deployment and then Click `Manage Deployment` on the top right to view metrics. +
-image:images/step4/x.PNG[]  +
+Click into your deployment and then Click `Manage Deployment` on the top right to view `System Metrics`. +
+image:images/step4/4-2-13.PNG[]  +
 
 
 
 == Step 5: SQL Stream Builder (SSB)
-The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous workshop and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
+The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous step and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
 
 
 Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster-emea`. +
 Within the DataHub, click on `Streaming SQL Console`.  +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-1a.PNG[]  +
+image:images/step5/5-1b.PNG[]  +
 
-Create a new project: Create a SQL Stream Builer (SSB) Project by clicking `New Project` using the following details and click `Create`. +
+Create a new project: Create a SQL Stream Builer (SSB) Project by clicking `New Project` using the following details. +
 `Name`: `{user_id}_hol_workshop`. (Ex: `wuser00_hol_workshop`).  +
 `Description`:  SSB Project to analyze streaming data.  +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-1c.PNG[]  +
 
-Switch to the created project. Click on `Switch`. +
-image:images/stepx/x.PNG[]  +
+Click `Create`. +
+image:images/step5/5-1d.PNG[]  +
+
+Switch to the created project (Ex: `wuser00_hol_workshop`). Click on `Switch`. +
+image:images/step5/5-1e.PNG[]  +
+
+If pop up comes select `Switch Project`. +
+image:images/step5/5-1f.PNG[]  +
+
+You will see the screen something like below. +
+image:images/step5/5-1g.PNG[]  +
 
 Create Kafka Data Store: Create Kafka Data Store by selecting `Data Sources` in the left pane, clicking on the three-dotted icon next to `Kafka`, then selecting `New Kafka Data Source`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-1h.PNG[]  +
 
 `Name`: `{user-id}_cdp_kafka`. (Ex: wuser00_cdp_kafka) +
 `Brokers`: (Comma-separated List) +
@@ -782,30 +791,31 @@ image:images/stepx/x.PNG[]  +
 `SASL Username`: `<workload-username>`. (Ex: wuser00). +
 `SASL Mechanism`: `PLAIN`. +
 `SASL Password`: `Workload User password set by you in  'Step 1.1: Define Workload Password'`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-1i.PNG[]  +
+image:images/step5/5-1j.PNG[]  +
 
 Click on `Validate` to test the connections. Once successful click on `Create`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-1k.PNG[]  +
 
-Create Kafka Table: Create Kafka Table, by selecting `Virtual Tables` in the left pane by clicking on the three-dotted icon next to it.  The click on `New Kafka Table`. +
-image:images/stepx/x.PNG[]  +
+Create Kafka Table: Create Kafka Table, by selecting `Virtual Tables` in the left pane by clicking on the three-dotted icon next to it.  Then click on `New Kafka Table`. +
+image:images/step5/5-2a.PNG[]  +
 
 Configure the Kafka Table using the details below. +
 `Table Name`: {user-id}_syslog_data. (Ex:` wuser00_syslog_data`) +
 `Kafka Cluster`: `<select the Kafka data source you created previously>`. (Ex: wuser00_cdp_kafka) +
 `Data Format`: `JSON`. +
 `Topic Name`: `<select the topic created in Schema Registry>`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-2b.PNG[]  +
 
 When you select Data Format as AVRO, you must provide the correct Schema Definition when creating the table for SSB to be able to successfully process the topic data. For JSON tables, though, SSB can look at the data flowing through the topic and try to infer the schema automatically, which is quite handy at times. Obviously, there must be data in the topic already for this feature to work correctly. +
 
 *Note*: SSB tries its best to infer the schema correctly, but this is not always possible and sometimes data types are inferred incorrectly. You should always review the inferred schemas to check if it's correctly inferred and make the necessary adjustments. +
 
 Since you are reading data from a JSON topic, go ahead and click on `Detect Schema` to get the schema inferred. You should see the schema be updated in the `Schema Definition` tab. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-2c.PNG[]  +
 
 You will also notice that a "Schema is invalid" message appears upon the schema detection. If you hover the mouse over the message it shows the reason. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-3.PNG[]  +
 You will fix this in the next step. +
 
 
@@ -816,22 +826,24 @@ In this case, the syslog message has a field called `timestamp` that contains th
 `Input Timestamp Column`: `timestamp`. +
 `Event Time Column`: `event_time`. +
 `Watermark Seconds`: `3`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-4.PNG[]  +
 
 Now that you have configured the event time column, click on Detect Schema again. You should see the schema turn valid. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-5.PNG[]  +
 
 Click the `Create and Review` button to create the table. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-6.PNG[]  +
+
 Review the table's DDL and click Close. +
+image:images/step5/5-7.PNG[]  +
 
 Create a Flink Job, by selecting `Jobs` in the left pane, clicking on the three-dotted icon next to it, then clicking on `New Job`. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-8.PNG[]  +
 
 
 Give a unique job name (Ex:` wuser00_flink_job`) and click `Create`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-9.PNG[]  +
+image:images/step5/5-10.PNG[]  +
 
 Add the following SQL Statement in the Editor. +
 [,sql]
@@ -841,10 +853,10 @@ SELECT * FROM {user-id}_syslog_data WHERE severity <=3
 ----
 
 Run the Streaming SQL Job by clicking `Execute`. Also, ensure your `{user_id}-syslog-to-kafka` flow is running in CDF-PC. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-11.PNG[]  +
 
 In the `Results` tab, you should see syslog messages with severity levels <=3. +
-image:images/stepx/x.PNG[]  +
+image:images/step5/5-12.PNG[]  +
 
 
 ===== Misc Help ======

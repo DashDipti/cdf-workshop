@@ -14,7 +14,7 @@ It will take you step by step to completing the pre-requisites and deliver this 
 The entire lab is recorded and you can watch the same to have a better understanding of the lab. +
 https://fillin here[End-to-End Workshop (Recording)]. +
 
-== Pre-Requisite (Taken Care By Instructor)
+== Pre-Requisite (Taken Care by Instructor)
 
 For the ease of carrying out the workshop and considering the time at hand, we have already taken care of some of the steps that need to be considered before we can start with the actual workshop steps. The prerequisites that need to be in place are: +
 
@@ -26,7 +26,7 @@ For the ease of carrying out the workshop and considering the time at hand, we h
 
 Step 1 basically talks about verifying different aspects w.r.t to access and connections before we could begin with the actual steps.
 
-== Step 0: Instructor Explaination
+== Step 0: Instructor Explanation
 
 Your instructor will guide you through this. +
 (1) https://docs.google.com/spreadsheets/d/1s63G-iBtgS8tDZOD1ml8Gh0YdunL4MtNqNzyN7E7gaY/edit#gid=412559706[Credentials]: Participants must enter their `First Name`, `Last Name` & `Company` details and make a note of corresponding `Workshop Login Username`, `Workshop Login Password` and `CDP Workload User` to be used in this workshop. +
@@ -47,7 +47,7 @@ You should be able to get the following home page of CDP Public Cloud. +
 
 image:images/step1/1-2.PNG[]  +
 
-You will need to define your workload password that will be used to acess non-SSO interfaces. Please keep a note of this workload password. If you have forgotten it, you will be able to repeat this process and define another one. +
+You will need to define your workload password that will be used to access non-SSO interfaces. Please keep a note of this workload password. If you have forgotten it, you will be able to repeat this process and define another one. +
 You may read more about workload passwords https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
 
 
@@ -106,7 +106,7 @@ image:images/step1/1-2-2-3.PNG[]  +
 In Ranger, select the `SCHEMA-REGISTRY' repository that’s associated with the stream messaging datahub. +
 image:images/step1/1-2-3-1.PNG[]  +
 
-Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in the Policy : all - `schema-group, schema-metadata, schema-branch, schema-version`. +
+Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in the Policy: all - `schema-group, schema-metadata, schema-branch, schema-version`. +
 image:images/step1/1-2-3-2.PNG[]  +
 
 You may just scroll down this screen to understand the policy better. +
@@ -123,7 +123,7 @@ image:images/step1/1-2-3-5.PNG[]  +
 
 === Step 1.3: Obtain the Kafka Broker List
 
-We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect  and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
+We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
 
 Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `emeaworkshop-environ`). +
 image:images/step1/1-3-1.PNG[]  +
@@ -159,7 +159,7 @@ image:images/step1/1-4-4.PNG[]  +
 
 === Step 1.5: KeyTab
 
-To run queries on the `SQL Stream Builder` you need to have your KeyTab `unlocked`. This is mainly for `authentication` purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your Keytab is `already unlocked`. We have shared the steps for both the scenarios.
+To run queries on the `SQL Stream Builder` you need to have your KeyTab `unlocked`. This is mainly for `authentication` purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your KeyTab is `already unlocked`. We have shared the steps for both the scenarios.
 
 === Step 1.5 (a): Unlock your KeyTab
 
@@ -178,7 +178,7 @@ image:images/step1/1-5-4.PNG[]  +
 Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
 image:images/step1/1-5-5.PNG[]  +
 
-Click on `Unlock Keytab` and look for the message 'Success Keytab has been unclocked'.
+Click on `Unlock Keytab` and look for the message 'Success KeyTab has been unclocked'.
 image:images/step1/1-5-6.PNG[]  +
 image:images/step1/1-5-7.PNG[]  +
 
@@ -211,14 +211,14 @@ image:images/step1/1-5-4.PNG[]  +
 Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
 image:images/step1/1-5-5.PNG[]  +
 
-Click on `Unlock Keytab` and look for the message `Success Keytab has been unclocked`.
+Click on `Unlock Keytab` and look for the message `Success KeyTab has been unclocked`.
 image:images/step1/1-5-6.PNG[]  +
 image:images/step1/1-5-7.PNG[]  +
 
 
 == Step 2: Create a Flow using Flow Designer
 Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps. +
-(a) The data flow that would be used for CDF-PC must be self contained within a process group. +
+(a) The data flow that would be used for CDF-PC must be self-contained within a process group. +
 (b) Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc. +
 (c) All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC. +
 
@@ -250,7 +250,7 @@ Click on the `Flow Options` on the top right corner of your canvas and then sele
 image:images/step2/2-1-2-1.PNG[]  +
 
 Configure Parameters: Parameters are reused within the flow multiple times and will also be configurable at the time of deployment. +
-There are 2 options available: `Add Parameter`, which is used for specifying non-sensitive values and `Add Sensitive Paramter`, which is used for specifying sensitive parameters like password. +
+There are 2 options available: `Add Parameter`, which is used for specifying non-sensitive values and `Add Sensitive Parameter`, which is used for specifying sensitive parameters like password. +
 
 - Click on `Add Parameter`. +
 image:images/step2/2-1-2-2.PNG[]  +
@@ -276,7 +276,7 @@ image:images/step2/2-1-2-6.PNG[]  +
 
 Add the following parameters. +
 `Name`: `CDP Workload User Password`. +
-`Value`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
+`Value`: `Workload User password set by you in 'Step 1.3: Define Workload Password'`. +
 Click on `Apply`. +
 image:images/step2/2-1-2-7.PNG[]  +
 
@@ -298,7 +298,7 @@ Now that we have created these parameters, we can easily search and reuse them w
 This will bring up a list of existing parameters that are not tagged as sensitive.
 
 ==== Step 2.1.3: Create the flow
-Let's go back to the canvas to start designing our flow.This flow will contain 2 Processors: +
+Let's go back to the canvas to start designing our flow. This flow will contain 2 Processors: +
 `GenerateFlowFile`: Generates random data. +
 `PutCDPObjectStore`: Loads data into HDFS(S3). +
 //Our final flow will look something like this. +
@@ -313,11 +313,11 @@ Configure `GenerateFlowFile` processor: The `GenerateFlowFile` Processor will no
 image:images/step2/2-1-3-4.PNG[]  +
 
 Fill in the values in the right window pane to configure the processor in the following way. +
-`Processor Name` : `DataGenerator` +
-`Scheduling Strategy` : `Timer Driven` +
-`Run Duration` : `0ms` +
-`Run Schedule` : `30 sec` +
-`Execution` : `All Nodes` +
+`Processor Name`: `DataGenerator` +
+`Scheduling Strategy`: `Timer Driven` +
+`Run Duration`: `0ms` +
+`Run Schedule`: `30 sec` +
+`Execution`: `All Nodes` +
 `Properties`: `Custom Text` +
 
 [,sql]
@@ -376,7 +376,7 @@ image:images/step2/2-1-3-18.PNG[]  +
 
 ==== Step 2.1.4: Renaming the queues
 
-Naming the queue: Providing unique names to all queues is very important as they are used to define Key Performance Indicators (KPI) upon which CDF-PC will auto-scale. To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information. +
+Naming the queue: Providing unique names to all queues is very important as they are used to define Key Performance Indicators (KPI) upon which CDF-PC will auto scale. To name a queue, double-click the queue and give it a unique name.  A best practice here is to start the existing queue name (i.e. success, failure, retry, etc…) and add the source and destination processor information. +
 
 For example, the success queue between `DataGenerator` and `Move2S3` is named `success_Move2S3`. +
 image:images/step2/2-1-4-1.PNG[]  +
@@ -393,7 +393,7 @@ image:images/step2/2-2-1.PNG[]  +
 In the next window, click `Start Test Session`. +
 image:images/step2/2-2-2.PNG[]  +
 
-The activation should take about a couple of minutes. While this happens you will see this at the top right corner of your screen. +
+The activation should take about a couple of minutes. While this happens, you will see this at the top right corner of your screen. +
 image:images/step2/2-2-3.PNG[]  +
 
 Once the Test Session is ready you will see the following message on the top right corner of your screen. +
@@ -414,7 +414,7 @@ image:images/step2/2-2-7.PNG[]  +
 
 === Step 2.3: Moving the flow to the flow catalog
 
-After the flow has been created and tested we can now PUBLISH the flow to the Flow Catalog. +
+After the flow has been created and tested, we can now PUBLISH the flow to the Flow Catalog. +
 Stop the current test session by clicking on the green tab on top right corner indicating `Active Test Session`. Click on `End`. +
 image:images/step2/2-3-1.PNG[]  +
 image:images/step2/2-3-2.PNG[]  +
@@ -449,13 +449,13 @@ image:images/step2/2-4-5.PNG[]  +
 
 Set the `Parameters`and click `Next ->`. +
 `CDP Workload User`: `The username assigned to you`. Ex: `wuser00`. +
-`CDP Workload User Password`: `Workload User password set by you in  'Step 1.1: Define Workload Password'`. +
+`CDP Workload User Password`: `Workload User password set by you in 'Step 1.1: Define Workload Password'`. +
 `CDP Environment` : DummyParameter +
 `S3 Directory`: `LabData` +
 image:images/step2/2-4-6.PNG[]  +
 
 Set the cluster size. +
-Select the `Extra Small` size and click `Next`.  In this step you can configure how your flow will autoscale, but keep it disabled for this lab. +
+Select the `Extra Small` size and click `Next`.  In this step you can configure how your flow will auto scale, but keep it disabled for this lab. +
 image:images/step2/2-4-7.PNG[]  +
 
 Add Key Performance indicators: Set up KPIs to track specific performance metrics of a deployed flow. Click on `Add New KPI`. +
@@ -485,7 +485,7 @@ image:images/step2/2-4-13.PNG[]  +
 The data gets populated in the S3 bucket. Your instructor will be able to see this and as a participant you don't have access. +
 image:images/step2/2-4-14.PNG[]  +
 
-Also, after a while you will see the the flow something like below for the flow you just deployed. +
+Also, after a while you will see the flow something like below for the flow you just deployed. +
 image:images/step2/2-4-15.PNG[]  +
 
 === Step 2.5: Verifying flow deployment
@@ -493,7 +493,7 @@ Click on the flow in the Dashboard and select `Manage Deployment`. +
 image:images/step2/2-5-1.PNG[]  +
 image:images/step2/2-5-2.PNG[]  +
 
-Manage KPI and Alerts: Click on the `KPI and Alerts` tab under `Deplyment Settings` to get the list of KPIs that have been set. You also have an option to modify or add more KPIs to your flow here. +
+Manage KPI and Alerts: Click on the `KPI and Alerts` tab under `Deployment Settings` to get the list of KPIs that have been set. You also have an option to modify or add more KPIs to your flow here. +
 image:images/step2/2-5-3.PNG[]  +
 
 Manage Sizing and Scaling: Click on the `Sizing and Scaling` tab to get detailed information. +
@@ -678,7 +678,7 @@ image:images/step3/3-2-1e.PNG[]  +
 == Step 4: Operationalizing Externally Developed Data Flows with CDF-PC
 
 === Step 4.1: Import the Flow into the CDF-PC Catalog
-Open the CDF-PC data service and click on `Catalog` in the left tab. Select `Import Flow Definition` on the Top Right.+
+Open the CDF-PC data service and click on `Catalog` in the left tab. Select `Import Flow Definition` on the Top Right. +
 image:images/step4/4-1-0.PNG[]  +
 
 
@@ -762,7 +762,7 @@ Within the DataHub, click on `Streaming SQL Console`.  +
 image:images/step5/5-1a.PNG[]  +
 image:images/step5/5-1b.PNG[]  +
 
-Create a new project: Create a SQL Stream Builer (SSB) Project by clicking `New Project` using the following details. +
+Create a new project: Create a SQL Stream Builder (SSB) Project by clicking `New Project` using the following details. +
 `Name`: `{user_id}_hol_workshop`. (Ex: `wuser00_hol_workshop`).  +
 `Description`:  SSB Project to analyze streaming data.  +
 image:images/step5/5-1c.PNG[]  +
@@ -788,7 +788,7 @@ image:images/step5/5-1h.PNG[]  +
 `Protocol`: `SASL/SSL` +
 `SASL Username`: `<workload-username>`. (Ex: wuser00). +
 `SASL Mechanism`: `PLAIN`. +
-`SASL Password`: `Workload User password set by you in  'Step 1.1: Define Workload Password'`. +
+`SASL Password`: `Workload User password set by you in 'Step 1.1: Define Workload Password'`. +
 image:images/step5/5-1i.PNG[]  +
 image:images/step5/5-1j.PNG[]  +
 
@@ -799,8 +799,8 @@ Create Kafka Table: Create Kafka Table, by selecting `Virtual Tables` in the lef
 image:images/step5/5-2a.PNG[]  +
 
 Configure the Kafka Table using the details below. +
-`Table Name`: {user-id}_syslog_data. (Ex:` wuser00_syslog_data`) +
-`Kafka Cluster`: `<select the Kafka data source you created previously>`. (Ex: wuser00_cdp_kafka) +
+`Table Name`: {user-id}_syslog_data. (Ex: `wuser00_syslog_data`) +
+`Kafka Cluster`: `<select the Kafka data source you created previously>`. (Ex: `wuser00_cdp_kafka`) +
 `Data Format`: `JSON`. +
 `Topic Name`: `<select the topic created in Schema Registry>`. +
 image:images/step5/5-2b.PNG[]  +
@@ -812,7 +812,7 @@ When you select Data Format as AVRO, you must provide the correct Schema Definit
 Since you are reading data from a JSON topic, go ahead and click on `Detect Schema` to get the schema inferred. You should see the schema be updated in the `Schema Definition` tab. +
 image:images/step5/5-2c.PNG[]  +
 
-You will also notice that a "Schema is invalid" message appears upon the schema detection. If you hover the mouse over the message it shows the reason. +
+You will also notice that a "Schema is invalid" message appears upon the schema detection. If you hover the mouse over the message, it shows the reason. +
 image:images/step5/5-3.PNG[]  +
 You will fix this in the next step. +
 

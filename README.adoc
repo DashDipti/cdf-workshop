@@ -833,14 +833,14 @@ image:images/step5/5-5.PNG[]  +
 Click the `Create and Review` button to create the table. +
 image:images/step5/5-6.PNG[]  +
 
-Review the table's DDL and click Close. +
+Review the table's DDL and click `Close`. +
 image:images/step5/5-7.PNG[]  +
 
 Create a Flink Job, by selecting `Jobs` in the left pane, clicking on the three-dotted icon next to it, then clicking on `New Job`. +
 image:images/step5/5-8.PNG[]  +
 
 
-Give a unique job name (Ex:` wuser00_flink_job`) and click `Create`. +
+Give a unique job name (Ex: `wuser00_flink_job`) and click `Create`. +
 image:images/step5/5-9.PNG[]  +
 image:images/step5/5-10.PNG[]  +
 

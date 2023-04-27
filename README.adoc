@@ -28,15 +28,50 @@ For the ease of carrying out the workshop and considering the time at hand, we h
 
 Step 1 basically talks about verifying different aspects w.r.t to access and connections before we could begin with the actual steps.
 
-
-== Step 1: Introduction & Set Up
-
-=== Step 1.1: Access Verification
+== Step 0: Instructor Explaination
 
 Your instructor will guide you through this. +
 (1) https://docs.google.com/spreadsheets/d/1s63G-iBtgS8tDZOD1ml8Gh0YdunL4MtNqNzyN7E7gaY/edit#gid=412559706[Credentials]: Participants must enter their `First Name`, `Last Name` & `Company` details and make a note of corresponding `Workshop Login Username`, `Workshop Login Password` and `CDP Workload User` to be used in this workshop. +
 (2) http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]: Using the details in the previous step make sure you are able to login here. +
 
+
+== Step 1: Introduction & Set Up
+
+=== Step 1.1: Define Workload Password
+
+Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login] in case you are not logged in. +
+Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0`. +
+(*Note*: Note that your Workshop Login Username would be something like `wuser00@workshop.com` and not just `wuser00`). +
+
+image:images/step1/1-1.PNG[]  +
+
+You should be able to get the following home page of CDP Public Cloud. +
+
+image:images/step1/1-2.PNG[]  +
+
+You will need to define your workload password that will be used to acess non-SSO interfaces. Please keep a note of this workload password. If you have forgotten it, you will be able to repeat this process and define another one. +
+You may read more about workload passwords https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
+
+
+. Click on your `user name` (Ex: `wuser00@workshop.com`) at the lower left corner.
+. Click on the `Profile` option.
+
+image:images/step1/1-3.PNG[]  +
+
+. Click option `Set Workload Password`.
+. Enter a suitable `Password` and `Confirm Password`.
+. Click button `Set Workload Password`.
+
+
+image:images/step1/1-4.PNG[]  +
+
+image::images/step1/1-5.PNG[]
+
+{blank} +
+
+Check that you got the message - `Workload password is currently set` or alternatively, look for a message next to `Workload Password` which says `(Workload password is currently set)`
+
+image::images/step1/1-6.PNG[] +
 
 === Step 1.2: Verify permissions in Apache Ranger
 
@@ -85,41 +120,7 @@ image:images/step1/1-2-3-4.PNG[]  +
 Click on `Leave` option in the pop-up. +
 image:images/step1/1-2-3-5.PNG[]  +
 
-=== Step 1.3: Define Workload Password
 
-Please use the login url: http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]. +
-Enter the `Workshop Login Username` and `Workshop Login Password` that you obtained as part of `Step 0.1`. +
-(*Note*: Note that your Workshop Login Username would be something like `wuser00@workshop.com` and not just `wuser00`). +
-
-image:images/step1/1.PNG[]  +
-
-You should be able to get the following home page of CDP Public Cloud. +
-
-image:images/step1/2.PNG[]  +
-
-You will need to define your workload password that will be used to acess non-SSO interfaces. Please keep a note of this workload password. If you have forgotten it, you will be able to repeat this process and define another one. +
-You may read more about workload passwords https://docs.cloudera.com/management-console/cloud/user-management/topics/mc-access-paths-to-cdp.html[here].
-
-
-. Click on your `user name (Ex: wuser00@workshop.com`) at the lower left corner.
-. Click on the `Profile` option.
-
-image:images/step4/1.PNG[]  +
-
-. Click option `Set Workload Password`.
-. Enter a suitable `Password` and `Confirm Password`.
-. Click button `Set Workload Password`.
-
-
-image:images/step4/2.PNG[]  +
-
-image::images/step4/3.PNG[]
-
-{blank} +
-
-Check that you got the message - `Workload password is currently set` or alternatively, look for a message next to `Workload Password` which says `(Workload password is currently set)`
-
-image::images/step4/4.PNG[] +
 
 
 === Step 1.4: Obtain the Kafka Broker List

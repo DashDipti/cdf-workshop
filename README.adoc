@@ -287,16 +287,16 @@ image:images/step2/2-1-2-8.PNG[]  +
 image:images/step2/2-1-2-9.PNG[]  +
 
 
-Click on 'Back to Flow Designer' +
+Click on `Back to Flow Designer` +
 image:images/step2/2-1-2-10.PNG[]  +
 
-Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is useful for CDP Workload User and CDP Workload User Password. +
-`*NOTE ONLY*: To search for existing parameters -
-1. Open a processor's configuration and proceed to the properties tab.
-2. Enter: #{.
-3. Hit  'Ctrl+Spacebar'.
+Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is useful for `CDP Workload User` and `CDP Workload User Password`. +
+`*NOTE ONLY*: To search for existing parameters - +
+1. Open a processor's configuration and proceed to the properties tab. +
+2. Enter: `#{`. +
+3. Hit  `Ctrl+Spacebar`. +
 
-This will bring up a list of existing parameters that are not tagged as sensitive.`
+This will bring up a list of existing parameters that are not tagged as sensitive.
 
 ==== Step 2.1.3: Create the flow
 Let's go back to the canvas to start designing our flow.This flow will contain 2 Processors: +

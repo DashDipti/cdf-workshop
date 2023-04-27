@@ -78,10 +78,10 @@ image::images/step1/1-6.PNG[]
 Click on the `Management Console` icon. +
 image:images/step1/1-2-1-1.PNG[]  +
 
-Click on the `Environments` tab on the left pane. +
+Click on the `Environments` tab on the left pane. Select the environment that is shared by the instructor (Ex: `emeaworkshop-environ`). +
 image:images/step1/1-2-1-2.PNG[]  +
 
-Select the environment that is shared by the instructor (Ex: `emeaworkshop-environ`) and click on the Ranger quick link to access the Ranger UI. +
+Click on the Ranger quick link to access the Ranger UI. +
 image:images/step1/1-2-1-3.PNG[]  +
 image:images/step1/1-2-1-4.PNG[]  +
 
@@ -101,7 +101,7 @@ image:images/step1/1-2-2-3.PNG[]  +
 
 
 ==== Step 1.2.3: Schema Registry Permissions +
-In Ranger, select the `SCHEMA-REGISTRY' repository that’s associated with the stream messaging datahub. +
+In Ranger, select the `SCHEMA-REGISTRY` repository that’s associated with the stream messaging datahub. +
 image:images/step1/1-2-3-1.PNG[]  +
 
 Verify if the user group `workshop-users` (all users are part of this group) who will be performing the workshop is present in the Policy: all - `schema-group, schema-metadata, schema-branch, schema-version`. +

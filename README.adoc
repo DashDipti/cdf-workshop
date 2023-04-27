@@ -537,10 +537,10 @@ For this we will be leveraging the DataHubs which have already been created - `s
 `Note that the above names might be different depending upon your environment.`
 
 === Step 3.1: Create a Kafka Topic
-Go to the 'Environments' tab as shown in the screenshot. Click on to your environment. (Ex: `emearworkshop-environ`). +
+Go to the `Environments` tab as shown in the screenshot. Click on to your environment. (Ex: `emearworkshop-environ`). +
 image:images/step3/3-1-1.PNG[]  +
 
-Click on the Data Hub for Stream Messaging (Ex: `kafka-smm-cluster-emea`).. 
+Click on the Data Hub for Stream Messaging (Ex: `kafka-smm-cluster-emea`). +
 image:images/step3/3-1-2.PNG[]  +
 
 Login to `Streams Messaging Manager` by clicking the appropriate hyperlink in the Streams Messaging Datahub (Ex: `kafka-smm-cluster-emea`). +
@@ -555,8 +555,8 @@ image:images/step3/3-1-5.PNG[]  +
 Create a Topic with the following parameters and then click `Save`. +
 `Name`:	`<username>_syslog`. Ex: `wuser00_syslog`. +
 `Partitions`: `1` +
-`Availability`: `Moderate` +
-`Cleanup Policy`: `Delete` +
+`Availability`: `MODERATE` +
+`CLEANUP POLICY`: `delete` +
 *Note*: The Flow will not work if you set the Cleanup Policy to anything other than `Delete`. This is because we are not specifying keys when writing to Kafka. +
 
 image:images/step3/3-1-6.PNG[]  +

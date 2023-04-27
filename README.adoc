@@ -149,14 +149,15 @@ Example +
 
 
 === Step 1.4: Download Resources from GitHub
-Scroll up the page here (https://github.com/DashDipti/cdf-workshop) and click on <> Code and then choose the option Download ZIP. +
-image:images/stepx/x.PNG[]  +
+Scroll up the page here (https://github.com/DashDipti/cdf-workshop) and click on `<> Code` and then choose the option `Download ZIP`. +
+image:images/step1/1-4-1.PNG[]  +
 
 Use any unzip utility to download extract the content of the partner-summit-2023-main.zip file. +
-image:images/stepx/x.PNG[]  +
+image:images/step1/1-4-2.PNG[]  +
+image:images/step1/1-4-3.PNG[]  +
 
-In the extracted content just be sure that the downloaded files has a file `syslog-to-kafka.json` which should be around ~25 KB in size. You will need this file in later step. +
-image:images/stepx/x.PNG[]  +
+In the extracted content just be sure that the downloaded files has a file `syslog-to-kafka.json` which should be around ~24 KB in size. You will need this file in later step. +
+image:images/step1/1-4-4.PNG[]  +
 
 === Step 1.5: Unlock your KeyTab
 

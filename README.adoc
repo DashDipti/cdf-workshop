@@ -680,11 +680,8 @@ image:images/step3/3-2-1e.PNG[]  +
 == Step 4: Operationalizing Externally Developed Data Flows with CDF-PC
 
 === Step 4.1: Import the Flow into the CDF-PC Catalog
-Open the CDF-PC data service and click on `Catalog` in the left tab. +
-image:images/stepx/x.PNG[]  +
-
-Select `Import Flow Definition` on the Top Right. +
-image:images/stepx/x.PNG[]  +
+Open the CDF-PC data service and click on `Catalog` in the left tab. Select `Import Flow Definition` on the Top Right.+
+image:images/step4/4-1-0.PNG[]  +
 
 
 Add the following information. +
@@ -692,33 +689,34 @@ Add the following information. +
 `Flow Description`: `Reads Syslog in RFC 5424 format, applies a SQL filter, transforms the data into JSON records, and publishes to Kafka.` +
 `NiFi Flow Configuration`: syslog-to-kafka.json (From the resources downloaded earlier). +
 `Version Comments`: Initial Version. +
-Click `Import`. +
-image:images/stepx/x.PNG[]  +
 
+image:images/step4/4-1-1.PNG[]  +
+image:images/step4/4-1-2.PNG[]  +
+
+Click `Import`. +
+image:images/step4/4-1-3.PNG[]  +
+image:images/step4/4-1-4.PNG[]  +
 
 
 === Step 4.2: Deploy the Flow in CDF-PC
 
 Search for the flow in the Flow Catalog by typing the flow name that you created in the previous step. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-1.PNG[]  +
 
-Click on the Flow, you should see the following. +
-image:images/stepx/x.PNG[]  +
-
-
-Click on `Version 1`, you should see a `Deploy` Option appear shortly. Then click on `Deploy`. +
-image:images/stepx/x.PNG[]  +
+Click on the Flow, you should see the following. You should see a `Deploy` Option appear shortly. Then click on `Deploy`. +
+image:images/step4/4-2-2.PNG[]  +
 
 Select the CDP `Target Environment` (Ex: `emeaworkshop-environ`) where this flow will be deployed, then click `Continue`. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-3.PNG[]  +
 
 Give the deployment a unique name (Ex: `{user_id}_syslog_to_kafka`), then click `Next`. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-4.PNG[]  +
 
 In the NiFi Configuration screen, click `Next ->` to take the default parameters. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-5.PNG[]  +
 
 Add the Flow Parameters as below. Note that you might have to navigate to multiple screens to fill it. Then click `Next`. +
+
 `CDP Workload User`: The workload username for the current user. (Ex: wuser00) +
 `CDP Workload Password`: The workload password for the current user (This password was set by you earlier). +
 `Filter Rule`: `SELECT * FROM FLOWFILE`. +
@@ -727,11 +725,13 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 `Kafka Destination Topic`: <username>_syslog (Ex: wuser00-syslog) +
 `Kafka Producer ID`:  nifi_dfx_p1 +
 `Schema Name`: <username>-syslog (Ex: wuser00-syslog) +
-`Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub(kafka-smm-cluster-emea) (Refer screenshot below). +
-*Example*: `kafka-smm-cluster-master0.pko-hand.dp5i-5vkq.cloudera.site` +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+`Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub (Ex: `kafka-smm-cluster-emea`) (Refer screenshot below). +
+*Example*: `kafka-smm-cluster-emea-master0.emeawork.dp5i-5vkq.cloudera.site` +
+image:images/step4/4-2-6a.PNG[]  +
+image:images/step4/4-2-6b.PNG[]  +
+
+Click `Next`. +
+image:images/step4/4-2-7.PNG[]  +
 
 
 On the next page, define sizing and scaling details and then click `Next`. +
@@ -739,17 +739,19 @@ On the next page, define sizing and scaling details and then click `Next`. +
 `Enable Auto Scaling`: `True` +
 `Min Nodes`: `1` +
 `Max Nodes`: `3` +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-8.PNG[]  +
 
 
 Skip the KPI page by clicking `Next` and Review your deployment. Then Click `Deploy`. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-9.PNG[]  +
+image:images/step4/4-2-10.PNG[]  +
 
 Proceed to the CDF-PC Dashboard and wait for your flow deployment to complete. A Green Check Mark will appear once complete, which might take a few minutes. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/4-2-11.PNG[]  +
+image:images/step4/4-2-12.PNG[]  +
 
 Click into your deployment and then Click `Manage Deployment` on the top right to view metrics. +
-image:images/stepx/x.PNG[]  +
+image:images/step4/x.PNG[]  +
 
 
 

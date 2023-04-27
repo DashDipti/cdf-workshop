@@ -167,10 +167,43 @@ image:images/step1/1-5-1.PNG[]  +
 Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
 image:images/step1/1-5-2.PNG[]  +
 
+Open the SSB UI by clicking on `Streaming SQL Console`. +
+image:images/step1/1-5-3.PNG[]  +
+
+Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
+image:images/step1/1-5-4.PNG[]  +
+
+Enter your Workload Username under `Principal Name*` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password` field. +
+image:images/step1/1-5-5.PNG[]  +
+
+Click on `Unlock Keytab` and look for the message 'Success Keytab has been unclocked'.
+image:images/step1/1-5-6.PNG[]  +
+image:images/step1/1-5-7.PNG[]  +
+
+=== Step 1.6: Reset your KeyTab 
+Click on the `Environment' in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
+image:images/step1/1-5-1.PNG[]  +
+
+Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
+image:images/step1/1-5-2.PNG[]  +
+
 
 Open the SSB UI by clicking on `Streaming SQL Console`. +
 image:images/step1/1-5-3.PNG[]  +
 
+Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
+image:images/step1/1-5-4.PNG[]  +
+
+If you get the following dialog box it means that your Keytab is already `UNLOCKED`. 
+image:images/step1/1-6-1.PNG[]  +
+
+Hence, it would be necessary to reset here by locking it and unlocking it again using your newly set workload password. So, enter your `CDP Workload Username` in `Principal Name` (Ex: `wuser00`). Click on `Lock Keytab`. +
+image:images/step1/1-6-2.PNG[]  +
+
+You will get the following message `Success KeyTab has been locked`. +
+image:images/step1/1-6-3.PNG[]  +
+
+Now do the following. +
 Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
 image:images/step1/1-5-4.PNG[]  +
 

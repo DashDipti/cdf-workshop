@@ -430,14 +430,14 @@ image:images/step2/2-3-5.PNG[]  +
 The flow will now be visible on the Flow  `Catalog` and is ready to be deployed. +
 image:images/step2/2-3-6.PNG[]  +
 
-=== Step 2.4: Deploying the flow [Attention]
+=== Step 2.4: Deploying the flow
 Go to the `Catalog` and search for the `Flow Catalog` by typing the name of the flow that you just now published.
 image:images/step2/2-4-1.PNG[]  +
 
 Click on the flow and you should see the option to `Deploy`. Click on 'Version 1' and then `Deploy`.
 image:images/step2/2-4-2.PNG[]  +
 
-Select the CDP `Target Environment' from the drop down. Make sure you select the environment given by the instructor. (Ex: `emeaworkshop-environ`). +
+Select the CDP `Target Environment' from the drop down. Make sure you select the environment given by the instructor. (Ex: `emeaworkshop-environ`). Click `Continue`. +
 image:images/step2/2-4-3.PNG[]  +
 
 Deployment Name: Give a unique name to the deployment. Click `Next ->`. +

@@ -50,7 +50,7 @@ image:images/step1/1-2-1-1.PNG[]  +
 Click on the `Environments` tab on the left pane. +
 image:images/step1/1-2-1-2.PNG[]  +
 
-Select the environment that is shared by the instructor (Ex: `pse-workshop`) and click on the Ranger quick link to access the Ranger UI. +
+Select the environment that is shared by the instructor (Ex: `emeaworkshop-environ`) and click on the Ranger quick link to access the Ranger UI. +
 image:images/step1/1-2-1-3.PNG[]  +
 image:images/step1/1-2-1-4.PNG[]  +
 
@@ -119,7 +119,7 @@ image::images/step4/4.PNG[] +
 
 We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect  and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager.
 
-Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `pse-workshop`). +
+Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `emeaworkshop-environ`). +
 image:images/stepx/x.PNG[]  +
 
 Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster-emea`). +
@@ -188,7 +188,7 @@ image:images/stepx/x.PNG[]  +
 Click on `Create Draft` (This will be the main process group for the flow that you'll create). +
 image:images/stepx/x.PNG[]  +
 
-Select the appropriate environment as part of the `Workspace` name (Ex: `pse-workshop`). *Note*: Please select the appropriate environment +
+Select the appropriate environment as part of the `Workspace` name (Ex: `emeaworkshop-environ`). *Note*: Please select the appropriate environment +
 Give your flow a name with your username as prefix (Ex: `wuser00_datadump_flow`). +
 Click on `CREATE`. +
 image:images/stepx/x.PNG[]  +
@@ -387,7 +387,7 @@ image:images/stepx/x.PNG[]  +
 Click on the flow and you should see the option to `Deploy`. Click on 'Version 1' and then `Deploy`.
 image:images/stepx/x.PNG[]  +
 
-Select the CDP `Target Environment' from the drop down. Make sure you select the environment given by the instructor. (Ex: `pse-workshop`). +
+Select the CDP `Target Environment' from the drop down. Make sure you select the environment given by the instructor. (Ex: `emeaworkshop-environ`). +
 image:images/stepx/x.PNG[]  +
 
 Deployment Name: Give a unique name to the deployment. +
@@ -633,7 +633,7 @@ image:images/stepx/x.PNG[]  +
 Click on `Version 1`, you should see a `Deploy` Option appear shortly. Then click on `Deploy`. +
 image:images/stepx/x.PNG[]  +
 
-Select the CDP `Target Environment` (Ex: `pse-workshop`) where this flow will be deployed, then click `Continue`. +
+Select the CDP `Target Environment` (Ex: `emeaworkshop-environ`) where this flow will be deployed, then click `Continue`. +
 image:images/stepx/x.PNG[]  +
 
 Give the deployment a unique name (Ex: `{user_id}_syslog_to_kafka`), then click `Next`. +

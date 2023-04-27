@@ -303,16 +303,18 @@ This will bring up a list of existing parameters that are not tagged as sensitiv
 Let's go back to the canvas to start designing our flow.This flow will contain 2 Processors: +
 `GenerateFlowFile`: Generates random data. +
 `PutCDPObjectStore`: Loads data into HDFS(S3). +
-Our final flow will look something like this. +
-image:images/stepx/x.PNG[]  +
+//Our final flow will look something like this. +
+//image:images/step2/2-1-3-0.PNG[]  +
 
 Add `GenerateFlowFile` processor: Pull the `Processor` onto the canvas and type `GenerateFlowFile` in the text box, and once the processor appears click on `Add`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-1.PNG[]  +
+image:images/step2/2-1-3-2.PNG[]  +
+image:images/step2/2-1-3-3.PNG[]  +
 
 Configure `GenerateFlowFile` processor: The `GenerateFlowFile` Processor will now be on your canvas and you can configure it by right clicking on it and selecting `Configuration`. +
-image:images/stepx/x.PNG[]  +
-Configure the processor in the following way. +
+image:images/step2/2-1-3-4.PNG[]  +
+
+Fill in the values in the right window pane to configure the processor in the following way. +
 `Processor Name` : `DataGenerator` +
 `Scheduling Strategy` : `Timer Driven` +
 `Run Duration` : `0ms` +
@@ -328,50 +330,51 @@ stopped unexpectedly
 ----
 
 The above represents a syslog out in RFC5424 format. Subsequent portions of this workshop will leverage this same syslog format. +
+image:images/step2/2-1-3-5.PNG[]  +
+image:images/step2/2-1-3-6.PNG[]  +
 
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
-
-Click on 'Apply'. [Attention] - Screenshot might be needed. +
-image:images/stepx/x.PNG[]  +
+Click on 'Apply'. +
+image:images/step2/2-1-3-7.PNG[]  +
 
 
 Add `PutCDPObjectStore` processor: Pull a new `Processor` onto the canvas and type `PutCDPObjectStore` in the text box, and once the processor appears click on `Add`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-8.PNG[]  +
+image:images/step2/2-1-3-9.PNG[]  +
 
 Configure `PutCDPObjectStore` processor: The `PutCDPObjectStore` Processor will now be on your canvas and you can configure it by right clicking on it and selecting `Configuration`. +
-Click on 'Apply'. [Attention] - Screenshot might be needed. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-10.PNG[]  +
+
 Configure the processor in the following way. +
 `Processor Name` : `Move2S3` +
 `Scheduling Strategy` : `Timer Driven` +
-`Run Duration` : `0 ms` +
+`Run Duration` : `0ms` +
 `Run Schedule` : `0 sec` +
 `Execution` : `All Nodes` +
 `Properties` +
 `Directory` : #{S3 Directory} +
 `CDP Username` : #{CDP Workload User} +
 `CDP Password` : #{CDP Workload User Password} +
-Relationships +
- - `Auto Terminate Relationships`: Check the `Terminate` box under `success`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+`Relationships`: Check the `Terminate` box under `success`. +
+
+image:images/step2/2-1-3-11.PNG[]  +
+image:images/step2/2-1-3-12.PNG[]  +
 
 Click on 'Apply'. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-13.PNG[]  +
 
 Create connection between processors: Connect the two processors by dragging the arrow from `DataGenerator` processor to the `Move2S3` processor and select on `success` relationship . The click `Add`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-14.PNG[]  +
+image:images/step2/2-1-3-15.PNG[]  +
 
 Your flow should look something like below. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-16.PNG[]  +
 
 The `Move2S3` processor does not know what to do in case of a failure. Let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself, as shown below. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-3-17.PNG[]  +
+
+Then select the option `failure`. Click on `Add`. +
+image:images/step2/2-1-3-18.PNG[]  +
+
 
 ==== Step 2.1.4: Renaming the queues
 

@@ -304,7 +304,7 @@ Let's go back to the canvas to start designing our flow. This flow will contain 
 
 Add `GenerateFlowFile` processor: Pull the `Processor` onto the canvas and type `GenerateFlowFile` in the text box, and once the processor appears click on `Add`. +
 image:images/step2/2-1-3-1a.PNG[]  +
-image:images/step2/2-1-3-1.PNG[]  +
+//image:images/step2/2-1-3-1.PNG[]  +
 image:images/step2/2-1-3-2.PNG[]  +
 image:images/step2/2-1-3-3.PNG[]  +
 
@@ -366,11 +366,12 @@ image:images/step2/2-1-3-15.PNG[]  +
 Your flow should look something like below. +
 image:images/step2/2-1-3-16.PNG[]  +
 
-The `Move2S3` processor does not know what to do in case of a failure. Let’s add a retry queue to it. This can be done by dragging the arrow on the processor outwards then back to itself, as shown below. +
+The `Move2S3` processor does not know what to do in case of a failure. Let’s add a retry queue to it. This can be done by dragging the arrow on the `Move2S3` processor outwards then back to itself, as shown below. +
 image:images/step2/2-1-3-17.PNG[]  +
 
 Then select the option `failure`. Click on `Add`. +
 image:images/step2/2-1-3-18.PNG[]  +
+image:images/step2/2-1-3-19.PNG[]  +
 
 
 ==== Step 2.1.4: Renaming the queues

@@ -220,75 +220,75 @@ image:images/step1/1-5-7.PNG[]  +
 
 == Step 2: Create a Flow using Flow Designer
 Creating a data flow for CDF-PC is the same process as creating any data flow within Nifi with 3 very important steps. +
-- The data flow that would be used for CDF-PC must be self contained within a process group. +
-- Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc. +
-- All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC. +
+(a) The data flow that would be used for CDF-PC must be self contained within a process group. +
+(b) Data flows for CDF-PC must use parameters for any property on a processor that is modifiable, e.g. user names, Kafka topics, etc. +
+(c) All queues need to have meaningful names (instead of Success, Fail, and Retry). These names will be used to define Key Performance Indicators in CDF-PC. +
 
 === Step 2.1: Building the Data Flow using Flow Designer
 
 ==== Step 2.1.1: Create the canvas to design your flow
 Access the `DataFlow` data service from the Management Console. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-1-1.PNG[]  +
+image:images/step2/2-1-1-1a.PNG[]  +
 
 Go to the `Flow Design`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-1-2.PNG[]  +
 
 Click on `Create Draft` (This will be the main process group for the flow that you'll create). +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-1-3.PNG[]  +
 
 Select the appropriate environment as part of the `Workspace` name (Ex: `emeaworkshop-environ`). *Note*: Please select the appropriate environment +
 Give your flow a name with your username as prefix (Ex: `wuser00_datadump_flow`). +
 Click on `CREATE`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-1-4.PNG[]  +
 
 
 On successful creation of the Draft, you should now be redirected to the canvas on which you can design your flow.
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-1-5.PNG[]  +
 
 
 ==== Step 2.1.2: Adding new parameters
 Click on the `Flow Options` on the top right corner of your canvas and then select `Parameters`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-1.PNG[]  +
 
 Configure Parameters: Parameters are reused within the flow multiple times and will also be configurable at the time of deployment. +
 There are 2 options available: `Add Parameter`, which is used for specifying non-sensitive values and `Add Sensitive Paramter`, which is used for specifying sensitive parameters like password. +
 
 - Click on `Add Parameter`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-2.PNG[]  +
 
 Add the following parameters. +
 `Name`: `S3 Directory`. +
 `Value`: `LabData`. +
 Click on `Apply`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-3.PNG[]  +
 
 - Click on `Add Parameter`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-4.PNG[]  +
 
 Add the following parameters. +
 `Name`: `CDP Workload User`. +
 `Value`: `The username assigned to you`. Ex: `wuser00`. +
 Click on `Apply`. +
-image:images/stepx/x.PNG[]  +
-
+image:images/step2/2-1-2-5.PNG[]  +
 
 
 - Click on `Add Sensitive Parameter`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-6.PNG[]  +
 
 Add the following parameters. +
 `Name`: `CDP Workload User Password`. +
 `Value`: `Workload User password set by you in  'Step 1.3: Define Workload Password'`. +
 Click on `Apply`. +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-7.PNG[]  +
 
 Click on `Apply Changes`. +
-image:images/stepx/x.PNG[]  +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-8.PNG[]  +
+image:images/step2/2-1-2-9.PNG[]  +
 
 
 Click on 'Back to Flow Designer' +
-image:images/stepx/x.PNG[]  +
+image:images/step2/2-1-2-10.PNG[]  +
 
 Now that we have created these parameters, we can easily search and reuse them within our dataflow. This is useful for CDP Workload User and CDP Workload User Password. +
 `*NOTE ONLY*: To search for existing parameters -

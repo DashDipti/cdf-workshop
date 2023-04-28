@@ -717,7 +717,7 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 `CDP Workload User`: The workload username for the current user. (Ex: `wuser00`) +
 `CDP Workload Password`: The workload password for the current user (This password was set by you earlier). +
 `Filter Rule`: `SELECT * FROM FLOWFILE`. +
-`Kafka Broker Endpoint`: A comma separated list of Kafka Brokers. +
+`Kafka Broker Endpoint`: The list of Kafka Brokers previously noted, which is comma separated as shown below. +
 		*Example*: `kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
 `Kafka Destination Topic`: <username>_syslog (Ex: `wuser00-syslog`) +
 `Kafka Producer ID`:  nifi_dfx_p1 +

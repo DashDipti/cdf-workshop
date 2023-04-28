@@ -26,7 +26,7 @@ For the ease of carrying out the workshop and considering the time at hand, we h
 == Step 0: Instructor Explanation
 Step 0 basically talks about verifying different aspects w.r.t to access and connections before we could begin with the actual steps. +
 Your instructor will guide you through this. +
-(1) https://docs.google.com/spreadsheets/d/1s63G-iBtgS8tDZOD1ml8Gh0YdunL4MtNqNzyN7E7gaY/edit#gid=412559706[Credentials]: Participants must enter their `First Name`, `Last Name` & `Company` details and make a note of corresponding `Workshop Login Username`, `Workshop Login Password` and `CDP Workload User` to be used in this workshop. +
+(1) https://docs.google.com/spreadsheets/d/1qfqr37JphmiYPQlTKnpY_00PdKuVyQy8KO_1-lOc5S4/edit?usp=sharing[Credentials]: Participants must enter their `First Name`, `Last Name` & `Company` details and make a note of corresponding `Workshop Login Username`, `Workshop Login Password` and `CDP Workload User` to be used in this workshop. +
 (2) http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login]: Using the details in the previous step make sure you are able to login here. +
 
 

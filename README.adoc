@@ -762,7 +762,7 @@ image:images/step1/1-5-7.PNG[]  +
 // New Section Ends //
 
 
-=== Step 5.3 (b): Working on SQL Stream Builder Project
+=== Step 5.2 : Working on SQL Stream Builder Project
 
 In case you are not on the SQL Stream Builder Interface you may reach so by following the next 2 screenshots, else you can continue from the 3rd screenshot. +
 

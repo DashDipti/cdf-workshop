@@ -325,7 +325,7 @@ For example, the success queue between `DataGenerator` and `Move2S3` is named `s
 image:images/step2/2-1-4-1.PNG[]  +
 
 The failure queue for `Move2S3` is named `failure_Move2S3`. Click `Apply`. +
-image:images/step2/2-1-4-1.PNG[]  +
+image:images/step2/2-1-4-2.PNG[]  +
 
 
 
@@ -663,9 +663,9 @@ Add the Flow Parameters as below. Note that you might have to navigate to multip
 `Filter Rule`: `SELECT * FROM FLOWFILE`. +
 `Kafka Broker Endpoint`: The list of Kafka Brokers previously noted, which is comma separated as shown below. +
 		*Example*: `kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093,kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
-`Kafka Destination Topic`: <username>_syslog (Ex: `wuser00-syslog`) +
+`Kafka Destination Topic`: <username>_syslog (Ex: `wuser00_syslog`) +
 `Kafka Producer ID`:  nifi_dfx_p1 +
-`Schema Name`: <username>-syslog (Ex: `wuser00-syslog`) +
+`Schema Name`: <username>-syslog (Ex: `wuser00_syslog`) +
 `Schema Registry Hostname`: The hostname of the master server in the Kafka Datahub (Ex: `kafka-smm-cluster-emea`) (Refer screenshot below). +
 *Example*: `kafka-smm-cluster-emea-master0.emeawork.dp5i-5vkq.cloudera.site` +
 image:images/step4/4-2-6a.PNG[]  +

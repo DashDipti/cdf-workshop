@@ -117,33 +117,34 @@ image:images/step1/1-2-3-5.PNG[]  +
 
 
 
+//=== Step 1.3: Obtain the Kafka Broker List
 
-=== Step 1.3: Obtain the Kafka Broker List
+//We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager. Later in the lab, we will need to have at hand the list of kafka brokers - already configured in this environment- so to be able to our dataflow to publish to our Kafka topics.
 
-We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager. Later in the lab, we will need to have at hand the list of kafka brokers - already configured in this environment- so to be able to our dataflow to publish to our Kafka topics.
+//Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `emeaworkshop-environ`). +
+//image:images/step1/1-3-1.PNG[]  +
 
-Access the Data Hub: Go to the environment that is shared by the INSTRUCTOR (Ex: `emeaworkshop-environ`). +
-image:images/step1/1-3-1.PNG[]  +
+//Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster-emea`). +
+//image:images/step1/1-3-2.PNG[]  +
 
-Click on the DataHub associated with Streams Messaging Manager (Ex: `kafka-smm-cluster-emea`). +
-image:images/step1/1-3-2.PNG[]  +
+//Go to the `Streams Messaging Manager` Interface. +
+//image:images/step1/1-3-3.PNG[]  +
 
-Go to the `Streams Messaging Manager` Interface. +
-image:images/step1/1-3-3.PNG[]  +
+//Select `Brokers` from the left tab. +
+//image:images/step1/1-3-4.PNG[]  +
 
-Select `Brokers` from the left tab. +
-image:images/step1/1-3-4.PNG[]  +
+//Save the name of the broker list in a notepad. +
+//image:images/step1/1-3-5.PNG[]  +
 
-Save the name of the broker list in a notepad. +
-image:images/step1/1-3-5.PNG[]  +
-
-Example +
-`kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093` +
-`kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093` +
-`kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
+//Example +
+//`kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093` +
+//`kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093` +
+//`kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
 
 
-=== Step 1.4: Download Resources from GitHub
+
+
+=== Step 1.3: Download Resources from GitHub
 Scroll up the page here (https://github.com/DashDipti/cdf-workshop) and click on `<> Code` and then choose the option `Download ZIP`. +
 image:images/step1/1-4-1.PNG[]  +
 
@@ -508,6 +509,22 @@ image:images/step3/3-1-7.PNG[]  +
 You can search for the topic that you created now and look for it as shown here. +
 image:images/step3/3-1-8.PNG[]  +
 
+
+=== Obtain the Kafka Broker List
+
+We will require the broker list to configure our processors to connect to our Kafka brokers which allows consumers to connect and fetch messages by partition, topic or offset. This information can be found in the Datahub cluster associated to the Streams Messaging Manager. Later in the lab, we will need to have at hand the list of kafka brokers - already configured in this environment- so to be able to our dataflow to publish to our Kafka topics. +
+
+
+Select `Brokers` from the left tab. +
+image:images/step1/1-3-4.PNG[]  +
+
+Save the name of the broker list in a notepad. +
+image:images/step1/1-3-5.PNG[]  +
+
+Example +
+`kafka-smm-cluster-emea-corebroker2.emeawork.dp5i-5vkq.cloudera.site:9093` +
+`kafka-smm-cluster-emea-corebroker0.emeawork.dp5i-5vkq.cloudera.site:9093` +
+`kafka-smm-cluster-emea-corebroker1.emeawork.dp5i-5vkq.cloudera.site:9093` +
 
 
 === Step 3.2: Create a Schema in Schema Registry

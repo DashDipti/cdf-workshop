@@ -761,6 +761,11 @@ image:images/step1/1-5-7.PNG[]  +
 
 // New Section Ends //
 
+
+=== Step 5.3 (b): Working on SQL Stream Builder 
+
+In case you are not on the SQL Stream Builder Interface you may reach so by following the next 2 screenshots, else you can continue from the 3rd screenshot. +
+
 Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster-emea`. +
 Within the DataHub, click on `Streaming SQL Console`.  +
 image:images/step5/5-1a.PNG[]  +

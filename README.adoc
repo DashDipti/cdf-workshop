@@ -154,63 +154,7 @@ image:images/step1/1-4-3.PNG[]  +
 In the extracted content just be sure that the downloaded files has a file `syslog-to-kafka.json` which should be around ~24 KB in size. You will need this file in later step. +
 image:images/step1/1-4-4.PNG[]  +
 
-=== Step 1.5: KeyTab
 
-To run queries on the `SQL Stream Builder` you need to have your KeyTab `unlocked`. This is mainly for `authentication` purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your KeyTab is `already unlocked`. We have shared the steps for both the scenarios.
-
-=== Step 1.5 (a): Unlock your KeyTab
-
-Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
-image:images/step1/1-5-1.PNG[]  +
-
-Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
-image:images/step1/1-5-2.PNG[]  +
-
-Open the SSB UI by clicking on `Streaming SQL Console`. +
-image:images/step1/1-5-3.PNG[]  +
-
-Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
-image:images/step1/1-5-4.PNG[]  +
-
-Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
-image:images/step1/1-5-5.PNG[]  +
-
-Click on `Unlock Keytab` and look for the message 'Success KeyTab has been unclocked'.
-image:images/step1/1-5-6.PNG[]  +
-image:images/step1/1-5-7.PNG[]  +
-
-=== Step 1.5 (b): Reset your KeyTab 
-Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
-image:images/step1/1-5-1.PNG[]  +
-
-Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
-image:images/step1/1-5-2.PNG[]  +
-
-Open the SSB UI by clicking on `Streaming SQL Console`. +
-image:images/step1/1-5-3.PNG[]  +
-
-Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
-image:images/step1/1-5-4.PNG[]  +
-
-If you get the following dialog box it means that your Keytab is already `UNLOCKED`. 
-image:images/step1/1-6-1.PNG[]  +
-
-Hence, it would be necessary to reset here by locking it and unlocking it again using your newly set workload password. So, enter your `CDP Workload Username` in `Principal Name` (Ex: `wuser00`). Click on `Lock Keytab`. +
-image:images/step1/1-6-2.PNG[]  +
-
-You will get the following message `Success KeyTab has been locked`. +
-image:images/step1/1-6-3.PNG[]  +
-
-Now do the following. +
-Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
-image:images/step1/1-5-4.PNG[]  +
-
-Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
-image:images/step1/1-5-5.PNG[]  +
-
-Click on `Unlock Keytab` and look for the message `Success KeyTab has been unclocked`.
-image:images/step1/1-5-6.PNG[]  +
-image:images/step1/1-5-7.PNG[]  +
 
 
 == Step 2: Create a Flow using Flow Designer
@@ -755,6 +699,67 @@ image:images/step4/4-2-13.PNG[]  +
 == Step 5: SQL Stream Builder (SSB)
 The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous step and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
 
+// New Section Starts //
+
+=== Step 5.1: KeyTab
+
+To run queries on the `SQL Stream Builder` you need to have your KeyTab `unlocked`. This is mainly for `authentication` purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your KeyTab is `already unlocked`. We have shared the steps for both the scenarios.
+
+=== Step 5.1 (a): Unlock your KeyTab
+
+Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
+image:images/step1/1-5-1.PNG[]  +
+
+Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
+image:images/step1/1-5-2.PNG[]  +
+
+Open the SSB UI by clicking on `Streaming SQL Console`. +
+image:images/step1/1-5-3.PNG[]  +
+
+Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
+image:images/step1/1-5-4.PNG[]  +
+
+Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
+image:images/step1/1-5-5.PNG[]  +
+
+Click on `Unlock Keytab` and look for the message 'Success KeyTab has been unclocked'.
+image:images/step1/1-5-6.PNG[]  +
+image:images/step1/1-5-7.PNG[]  +
+
+=== Step 5.1 (b): Reset your KeyTab 
+Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
+image:images/step1/1-5-1.PNG[]  +
+
+Click on the Data Hub cluster for stream analytics. (Ex: `ssb-analytics-cluster-emea`)
+image:images/step1/1-5-2.PNG[]  +
+
+Open the SSB UI by clicking on `Streaming SQL Console`. +
+image:images/step1/1-5-3.PNG[]  +
+
+Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
+image:images/step1/1-5-4.PNG[]  +
+
+If you get the following dialog box it means that your Keytab is already `UNLOCKED`. 
+image:images/step1/1-6-1.PNG[]  +
+
+Hence, it would be necessary to reset here by locking it and unlocking it again using your newly set workload password. So, enter your `CDP Workload Username` in `Principal Name` (Ex: `wuser00`). Click on `Lock Keytab`. +
+image:images/step1/1-6-2.PNG[]  +
+
+You will get the following message `Success KeyTab has been locked`. +
+image:images/step1/1-6-3.PNG[]  +
+
+Now do the following. +
+Click on the User name (Ex: `wuser00`) at the bottom left of the screen and select `Manage Keytab`. Make sure you are logged in as the username that was assigned to you. +
+image:images/step1/1-5-4.PNG[]  +
+
+Enter your Workload Username under `Principal Name *` and workload password that you had set earlier (In `Step 1.1: Define Workload Password`) in the `Password *` field. +
+image:images/step1/1-5-5.PNG[]  +
+
+Click on `Unlock Keytab` and look for the message `Success KeyTab has been unclocked`.
+image:images/step1/1-5-6.PNG[]  +
+image:images/step1/1-5-7.PNG[]  +
+
+// New Section Ends //
 
 Go to the SQL Stream Builder UI: SSB Interface can be reached from the DataHub that is running the Streams Analytics, in our case - `ssb-analytics-cluster-emea`. +
 Within the DataHub, click on `Streaming SQL Console`.  +

@@ -618,9 +618,9 @@ image:images/step3/3-2-1d.PNG[]  +
 image:images/step3/3-2-1e.PNG[]  +
 
 
-== Step 4: Operationalizing Externally Developed Data Flows with CDF-PC
+== Operationalizing Externally Developed Data Flows with CDF-PC
 
-=== Step 4.1: Import the Flow into the CDF-PC Catalog
+== Step 3.3 : Import the Flow into the CDF-PC Catalog
 Open the CDF-PC data service and click on `Catalog` in the left tab. Select `Import Flow Definition` on the Top Right. +
 image:images/step4/4-1-0.PNG[]  +
 
@@ -639,7 +639,7 @@ image:images/step4/4-1-3.PNG[]  +
 image:images/step4/4-1-4.PNG[]  +
 
 
-=== Step 4.2: Deploy the Flow in CDF-PC
+== Step 3.4: Deploy the Flow in CDF-PC
 
 Search for the flow in the Flow Catalog by typing the flow name that you created in the previous step. +
 image:images/step4/4-2-1.PNG[]  +
@@ -696,16 +696,16 @@ image:images/step4/4-2-13.PNG[]  +
 
 
 
-== Step 5: SQL Stream Builder (SSB)
+== Step 4: SQL Stream Builder (SSB)
 The purpose of this workshop is to demonstrate streaming analytic capabilities using SQL Stream Builder. We will leverage the NiFi Flow deployed in CDF-PC from the previous step and demonstrate how to query live data and subsequently sink it to another location. The SQL query will leverage the existing syslog schema in Schema Registry. +
 
 // New Section Starts //
 
-=== Step 5.1: KeyTab
+=== Step 4.1: KeyTab
 
 To run queries on the `SQL Stream Builder` you need to have your KeyTab `unlocked`. This is mainly for `authentication` purposes. As the credential you are using is sometimes reused as part of other people doing the same lab it is possible that your KeyTab is `already unlocked`. We have shared the steps for both the scenarios.
 
-=== Step 5.1 (a): Unlock your KeyTab
+=== Step 4.1 (a): Unlock your KeyTab
 
 Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
 image:images/step1/1-5-1.PNG[]  +
@@ -726,7 +726,7 @@ Click on `Unlock Keytab` and look for the message 'Success KeyTab has been unclo
 image:images/step1/1-5-6.PNG[]  +
 image:images/step1/1-5-7.PNG[]  +
 
-=== Step 5.1 (b): Reset your KeyTab 
+=== Step 4.1 (b): Reset your KeyTab 
 Click on the `Environment` in the left pane. Click on the environment assigned to you. (Ex: `emeaworkshop-environ`). +
 image:images/step1/1-5-1.PNG[]  +
 
@@ -762,7 +762,7 @@ image:images/step1/1-5-7.PNG[]  +
 // New Section Ends //
 
 
-=== Step 5.2 : Working on SQL Stream Builder Project
+=== Step 4.2 : Working on SQL Stream Builder Project
 
 In case you are not on the SQL Stream Builder Interface you may reach so by following the next 2 screenshots, else you can continue from the 3rd screenshot. +
 

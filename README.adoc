@@ -882,3 +882,8 @@ image:images/step5/5-11.PNG[]  +
 
 In the `Results` tab, you should see syslog messages with severity levels <=3. +
 image:images/step5/5-12.PNG[]  +
+
+
+=== Additional Important URLs
+https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
+https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow]

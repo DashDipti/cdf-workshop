@@ -9,9 +9,9 @@ image:images/step0/HOL.PNG[]  +
 This document guides students through the Hands-on lab on of Cloudera Data Flow.
 It will take you step by step to completing the pre-requisites and deliver this demo.
 
-== Recording
+//== Recording
 
-This lab will have a recording in the future and can be accessed by clicking - https://youtu.be/JYGoIecaPVQ[CDF-Recording]. +
+//This lab will have a recording in the future and can be accessed by clicking - https://youtu.be/[CDF-Recording]. +
 
 == Pre-Requisite (Taken Care by Instructor)
 

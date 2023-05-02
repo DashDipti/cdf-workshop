@@ -11,7 +11,7 @@ It will take you step by step to completing the pre-requisites and deliver this 
 
 == Recording
 
-This lab will have a recording in the future and can be accessed by clicking - https://infuture[CDF-Recording]. +
+This lab will have a recording in the future and can be accessed by clicking - https://youtu.be/JYGoIecaPVQ[CDF-Recording]. +
 
 == Pre-Requisite (Taken Care by Instructor)
 

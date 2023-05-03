@@ -888,5 +888,5 @@ image:images/step5/5-12.PNG[]  +
 https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
 https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
 https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
-https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation]
-https://github.com/mmehra12/Impact24[Partner Handbook]
+https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +
+https://github.com/mmehra12/Impact24[Partner Handbook for Cloudera Partners]

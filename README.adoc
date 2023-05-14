@@ -13,7 +13,7 @@ It will take you step by step to completing the pre-requisites and deliver this 
 
 //This lab will have a recording in the future and can be accessed by clicking - https://youtu.be/[CDF-Recording]. +
 
-== Pre-Requisite (Taken Care by Instructor)
+== Pre-Requisites (Taken Care by Instructor)
 
 For the ease of carrying out the workshop and considering the time at hand, we have already taken care of some of the steps that need to be considered before we can start with the actual workshop steps. The prerequisites that need to be in place are: +
 

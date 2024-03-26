@@ -884,10 +884,12 @@ In the `Results` tab, you should see syslog messages with severity levels <=3. +
 image:images/step5/5-12.PNG[]  +
 
 
-=== Additional Important URLs
+=== Cloudera Partners
 (1). https://github.com/cloudera-labs/cdp-validation#register-on-cloudera-sso[Register on CPN] +
 (2). https://github.com/cloudera-labs/cdp-validation#request-for-development-license[Request for developer License] +
-(3). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
-(4). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
-(5). https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
-(6). https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +
+
+=== Additional URLs
+(1). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
+(2). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
+(3). https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
+(4). https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +

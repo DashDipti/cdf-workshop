@@ -885,10 +885,9 @@ image:images/step5/5-12.PNG[]  +
 
 
 === Additional Important URLs
-https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
-https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
-https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
-https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +
-https://github.com/mmehra12/Impact24[Partner Handbook for Cloudera Partners]
-
-== End
+(1). https://github.com/cloudera-labs/cdp-validation#register-on-cloudera-sso[Register on CPN]
+(2). https://github.com/cloudera-labs/cdp-validation#request-for-development-license[Request for developer License]
+(3). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +
+(4). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
+(5). https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
+(6). https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +

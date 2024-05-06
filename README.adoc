@@ -885,8 +885,9 @@ image:images/step5/5-12.PNG[]  +
 
 
 === Cloudera Partners
-(1). https://github.com/cloudera-labs/cdp-validation#register-on-cloudera-sso[Register on CPN] +
-(2). https://github.com/cloudera-labs/cdp-validation#request-for-development-license[Request for developer License] +
+(1). https://github.com/cloudera-labs/cdp-validation?tab=readme-ov-file#register-on-cloudera-sso[Register on Cloudera SSO] + 
+(2). https://github.com/cloudera-labs/cdp-validation?tab=readme-ov-file#register-on-cloudera-partner-portal[Register on Cloudera Partner Portal] +
+(3). https://github.com/cloudera-labs/cdp-validation#request-for-development-license[Request for developer License] +
 
 === Additional URLs
 (1). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow.html[Cloudera DataFlow Virtual Tour] +

@@ -5,7 +5,7 @@
 Version : 1.0.1 `25th April 2023` +
 
 '''
-image:images/step0/HOL.PNG[]  +
+image:images/step0/HOL1.PNG[]  +
 This document guides students through the Hands-on lab on of Cloudera Data Flow.
 It will take you step by step to completing the pre-requisites and deliver this demo.
 
@@ -893,3 +893,5 @@ image:images/step5/5-12.PNG[]  +
 (2). https://www.cloudera.com/products/dataflow/cdp-tour-dataflow-functions.html[Cloudera DataFlow Functions Virtual Tour] +
 (3). https://www.cloudera.com/products/dataflow.html?tab=4[Cloudera Data Flow] +
 (4). https://docs.cloudera.com/dataflow/cloud/index.html[Cloudera Public Cloud DataFlow Documentation] +
+
+image:images/step0/thankyou.PNG[]  +
